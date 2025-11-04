@@ -1,0 +1,20 @@
+# Archivos temporales de editores
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de respaldo
+*.bak
+*.backup
+
+# Logs
+*.log
+
+# Archivos de entorno (si los agregas después)
+.env
