@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIEJ - Centro de Investigación Enciclopédica de Jurisprudencia</title>
+    <meta name="description" content="Centro de Investigación Enciclopédica de Jurisprudencia - Rigor académico y análisis profundo para el futuro del derecho">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <img src="assets/logo-ciej.svg" alt="CIEJ" class="logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMxYTM2NWQiLz48dGV4dCB4PSI3NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkNJRUo8L3RleHQ+PC9zdmc+'">
+                <span class="brand__name">CIEJ</span>
+            </div>
+            
+            <ul class="nav__menu">
+                <li><a href="#inicio" class="nav__link">Inicio</a></li>
+                <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+                <li><a href="#servicios" class="nav__link">Servicios</a></li>
+                <li><a href="#publicaciones" class="nav__link">Publicaciones</a></li>
+                <li><a href="#equipo" class="nav__link">Equipo</a></li>
+                <li><a href="#contacto" class="nav__link">Contacto</a></li>
+            </ul>
+            
+            <div class="nav__actions">
+                <div class="theme-switcher">
+                    <button class="theme-switcher__btn" id="themeToggle" aria-label="Cambiar modo claro/oscuro">
+                        <span class="theme-switcher__icon theme-switcher__icon--light">☀️</span>
+                        <span class="theme-switcher__icon theme-switcher__icon--dark">🌙</span>
+                    </button>
+                </div>
+                <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero__content container">
+                <h1 class="hero__title">Centro de Investigación Enciclopédica de Jurisprudencia</h1>
+                <p class="hero__subtitle">Rigor académico y análisis profundo para el futuro del derecho venezolano e internacional</p>
+                <div class="hero__actions">
+                    <a href="#servicios" class="btn btn--primary">Nuestros Servicios</a>
+                    <a href="#contacto" class="btn btn--secondary">Contactar Especialistas</a>
+                </div>
+            </div>
+            <div class="hero__pattern"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="nosotros" class="about section">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__text">
+                        <h2 class="section__title">Excelencia en Investigación Jurídica</h2>
+                        <p class="about__description">
+                            El CIEJ es una organización dedicada a la investigación jurídica de alto nivel, 
+                            comprometida con el análisis exhaustivo de la jurisprudencia nacional e internacional. 
+                            Nuestro equipo de profesionales combina tradición académica con innovación metodológica.
+                        </p>
+                        <div class="about__stats">
+                            <div class="stat">
+                                <span class="stat__number">15+</span>
+                                <span class="stat__label">Años de Experiencia</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">200+</span>
+                                <span class="stat__label">Publicaciones</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">50+</span>
+                                <span class="stat__label">Especialistas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__image">
+                        <div class="image-placeholder">
+                            <span>Imagen representativa del CIEJ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="services section">
+            <div class="container">
+                <h2 class="section__title">Nuestros Servicios de Investigación</h2>
+                <p class="section__subtitle">Soluciones especializadas para el análisis jurídico avanzado</p>
+                
+                <div class="services__grid">
+                    <div class="service-card">
+                        <div class="service-card__icon">⚖️</div>
+                        <h3 class="service-card__title">Análisis Doctrinal</h3>
+                        <p class="service-card__description">
+                            Estudio profundo de corrientes doctrinales y su aplicación en la jurisprudencia contemporánea.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-card__icon">📚</div>
+                        <h3 class="service-card__title">Jurisprudencia Comparada</h3>
+                        <p class="service-card__description">
+                            Análisis comparativo de sistemas jurídicos y soluciones jurisprudenciales a nivel internacional.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-card__icon">🔍</div>
+                        <h3 class="service-card__title">Investigación Especializada</h3>
+                        <p class="service-card__description">
+                            Estudios personalizados sobre temas jurídicos específicos para instituciones y profesionales.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-card__icon">📊</div>
+                        <h3 class="service-card__title">Consultoría Jurídica</h3>
+                        <p class="service-card__description">
+                            Asesoramiento basado en investigación aplicada para la solución de problemas complejos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publicaciones" class="publications section">
+            <div class="container">
+                <h2 class="section__title">Publicaciones Recientes</h2>
+                <p class="section__subtitle">Contribuciones al conocimiento jurídico nacional e internacional</p>
+                
+                <div class="publications__grid">
+                    <article class="publication-card">
+                        <div class="publication-card__image">
+                            <div class="image-placeholder">
+                                <span>Portada Publicación</span>
+                            </div>
+                        </div>
+                        <div class="publication-card__content">
+                            <h3 class="publication-card__title">La Evolución de la Jurisprudencia en el Derecho Civil Venezolano</h3>
+                            <p class="publication-card__author">Dr. Carlos Rodríguez - 2024</p>
+                            <p class="publication-card__abstract">
+                                Análisis exhaustivo de las transformaciones en la interpretación del Código Civil...
+                            </p>
+                            <a href="#" class="publication-card__link">Leer más →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication-card">
+                        <div class="publication-card__image">
+                            <div class="image-placeholder">
+                                <span>Portada Publicación</span>
+                            </div>
+                        </div>
+                        <div class="publication-card__content">
+                            <h3 class="publication-card__title">Derecho Administrativo Comparado: Venezuela y España</h3>
+                            <p class="publication-card__author">Dra. María Fernández - 2023</p>
+                            <p class="publication-card__abstract">
+                                Estudio comparativo de los sistemas de control de la administración pública...
+                            </p>
+                            <a href="#" class="publication-card__link">Leer más →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="equipo" class="team section">
+            <div class="container">
+                <h2 class="section__title">Nuestro Equipo</h2>
+                <p class="section__subtitle">Profesionales especializados en diversas áreas del derecho</p>
+                
+                <div class="team__grid">
+                    <div class="team-member">
+                        <div class="team-member__image">
+                            <div class="image-placeholder">
+                                <span>Foto Director</span>
+                            </div>
+                        </div>
+                        <h3 class="team-member__name">Dr. Roberto Silva</h3>
+                        <p class="team-member__position">Director de Investigación</p>
+                        <p class="team-member__bio">
+                            Especialista en Derecho Civil con más de 20 años de experiencia en investigación jurídica.
+                        </p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-member__image">
+                            <div class="image-placeholder">
+                                <span>Foto Investigador</span>
+                            </div>
+                        </div>
+                        <h3 class="team-member__name">Dra. Ana López</h3>
+                        <p class="team-member__position">Investigadora Principal</p>
+                        <p class="team-member__bio">
+                            Experta en Derecho Internacional y Comparado, con múltiples publicaciones indexadas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact section">
+            <div class="container">
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <h2 class="section__title">Contacto</h2>
+                        <p class="contact__description">
+                            Estamos aquí para colaborar en sus proyectos de investigación jurídica.
+                        </p>
+                        
+                        <div class="contact__details">
+                            <div class="contact__item">
+                                <span class="contact__icon">📧</span>
+                                <span>investigacion@ciejvenezuela.com</span>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon">📞</span>
+                                <span>+58 212-555-0100</span>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon">📍</span>
+                                <span>Caracas, Venezuela</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact__form">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Nombre Completo</label>
+                            <input type="text" id="name" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="email" class="form__label">Correo Electrónico</label>
+                            <input type="email" id="email" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="subject" class="form__label">Asunto</label>
+                            <input type="text" id="subject" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="message" class="form__label">Mensaje</label>
+                            <textarea id="message" class="form__textarea" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="assets/logo-ciej.svg" alt="CIEJ" class="logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMxYTM2NWQiLz48dGV4dCB4PSI3NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkNJRUo8L3RleHQ+PC9zdmc+'">
+                    <p class="footer__description">
+                        Centro de Investigación Enciclopédica de Jurisprudencia - Excelencia en investigación jurídica desde 2008.
+                    </p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>Enlaces Rápidos</h4>
+                        <ul>
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#nosotros">Nosotros</a></li>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#publicaciones">Publicaciones</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><a href="mailto:investigacion@ciejvenezuela.com">Correo Electrónico</a></li>
+                            <li><a href="tel:+582125550100">Teléfono</a></li>
+                            <li><a href="#contacto">Formulario de Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 CIEJ - Centro de Investigación Enciclopédica de Jurisprudencia. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+</body>
+</html>
