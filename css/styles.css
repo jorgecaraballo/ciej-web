@@ -327,9 +327,15 @@ body {
 }
 
 .btn--primary {
-  background: var(--color-accent);
-  color: white;
-  border-color: var(--color-accent);
+	/* Original
+	background: var(--color-accent);
+	border-color: var(--color-accent); */
+
+	/* Modificado por nosotros */
+	background: var(--color-primary);
+	border-color: var(--color-primary);
+
+	color: white;
 }
 
 .btn--primary:hover {
@@ -412,6 +418,32 @@ body {
   background: var(--color-background-alt);
 }
 
+/* 
+ * Código CSS que es muy poderoso para layouts responsivos.
+
+1. display: grid;
+Activa el modo Grid Layout en el contenedor
+Los hijos directos se convierten en grid items
+
+2. grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+Parte por Parte:
+repeat()
+repeat(4, 1fr)        4 columnas de igual tamaño
+repeat(3, 100px)      3 columnas de 100px cada una
+
+auto-fit vs auto-fill
+auto-fit: Expande los items para llenar el espacio disponible
+auto-fill: Mantiene el espacio vacío si no hay suficientes items
+
+minmax(280px, 1fr)
+280px: Ancho mínimo de cada columna
+1fr: Ancho máximo - fracción del espacio disponible
+
+3. gap: var(--space-md);
+Espacio entre grid items
+var(--space-md) usa una variable CSS (ej: 1rem o 16px)
+
+ */
 .services__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
