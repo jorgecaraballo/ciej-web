@@ -1,3 +1,13 @@
+/* 
+Funcionalidades que ya tienes:
+✅ Sistema de tema claro/oscuro con persistencia
+✅ Menú móvil funcional
+✅ Scroll suave para navegación interna
+✅ Header con efecto al hacer scroll
+✅ Formulario de contacto con feedback visual
+✅ Detección de preferencia del sistema
+*/
+
 class ThemeManager {
     constructor() {
         this.themeToggle = document.getElementById('themeToggle');
@@ -49,6 +59,15 @@ class ThemeManager {
                 });
             });
         }
+
+// En setupMobileMenu(), podrías agregar esto para cerrar el menú al hacer clic fuera
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav') && navMenu.classList.contains('nav__menu--active')) {
+        navMenu.classList.remove('nav__menu--active');
+        navToggle.classList.remove('nav__toggle--active');
+    }
+});
+
     }
     
     applyTheme(theme) {
@@ -75,6 +94,11 @@ class ThemeManager {
         
         metaThemeColor.setAttribute('content', themeColor);
     }
+}
+
+// Validación básica de email
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 // Smooth scrolling para enlaces internos
@@ -138,3 +162,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+

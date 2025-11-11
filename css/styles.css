@@ -305,6 +305,11 @@ body {
   opacity: 0.9;
 }
 
+/* Sugerencia para mejor contraste del texto sobre la imagen */
+.hero__title, .hero__subtitle {
+/*  text-shadow: 0 2px 4px rgba(0,0,0,0.5);*/ 
+}
+
 .hero__actions {
   display: flex;
   gap: var(--space-md);
@@ -356,8 +361,10 @@ body {
 }
 
 .btn--secondary:hover {
-  background: white;
-  color: var(--color-primary);
+  /*background: white;*/
+  background: var(--color-primary);  /* En lugar de white */
+  /*color: var(--color-primary);*/
+  color: white;                      /* En lugar de --color-primary */
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -744,10 +751,20 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
   .nav__menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-surface);
+    flex-direction: column;
+    padding: var(--space-md);
+    box-shadow: var(--shadow-lg);
+    border-top: 1px solid var(--color-border);
   }
-  
+
   .nav__toggle {
     display: flex;
   }
@@ -819,3 +836,41 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
   font-style: italic;
   text-align: center;
 }
+
+/* Estilos para el menÃº mÃ³vil */
+.nav__menu--active {
+    display: flex !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-surface);
+    flex-direction: column;
+    padding: var(--space-md);
+    box-shadow: var(--shadow-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.nav__menu--active .nav__link {
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav__menu--active .nav__link:last-child {
+    border-bottom: none;
+}
+
+/* Sin translate, solo rotaciÃ³n (mÃ¡s simple) */
+.nav__toggle--active span:nth-child(1) {
+    transform: rotate(45deg) translate(4.5px, 4.5px);
+}
+
+.nav__toggle--active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav__toggle--active span:nth-child(3) {
+    transform: rotate(-45deg) translate(4.5px, -4.5px);
+}
+
+
