@@ -526,6 +526,54 @@ body {
 }
 
 
+/* Mejora para about__stats en secciones Justipedia/Signapedia */
+.justipedia-section .about__stats,
+.signapedia-section .about__stats {
+  display: grid;
+  grid-template-columns: 1fr auto auto; /* Número → Leer más → Botón principal */
+  gap: var(--space-md);
+  align-items: center;
+  justify-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.justipedia-section .stat,
+.signapedia-section .stat {
+  text-align: center;
+}
+
+/* Asegurar que todos los botones tengan la misma altura */
+.justipedia-section .btn,
+.signapedia-section .btn {
+  min-height: 44px; /* Altura mínima consistente */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón "Leer más" específico para estas secciones */
+.btn--read-more {
+  background: transparent;
+  border: 2px solid var(--color-text-light);
+  color: var(--color-text-light);
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+
+.justipedia-section .btn--read-more:hover {
+  border-color: var(--color-justipedia);
+  color: var(--color-justipedia);
+  transform: translateY(-2px);
+}
+
+.signapedia-section .btn--read-more:hover {
+  border-color: var(--color-signapedia);
+  color: var(--color-signapedia);
+  transform: translateY(-2px);
+}
+
+
 /* Services Section */
 .services {
   background: var(--color-background-alt);
