@@ -495,6 +495,32 @@ body {
   margin: 0 auto var(--space-lg);
 }
 
+/* Estilos para el logo de Justipedia */
+.justipedia-logo {
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.justipedia-logo__img {
+    max-width: 400px; /* Ajusta según necesites */
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Opcional: Si quieres el logo más pequeño */
+.justipedia-logo--small .justipedia-logo__img {
+    max-width: 150px;
+}
+
+/* Opcional: Si quieres el logo alineado a la izquierda */
+.justipedia-logo--left {
+    text-align: left;
+}
+
+.justipedia-logo--left .justipedia-logo__img {
+    margin: 0;
+}
+
 
 /* Sección especial para Signapedia */
 .signapedia-section {
@@ -523,6 +549,32 @@ body {
 
 .service-card--signapedia .service-card__icon {
   color: var(--color-signapedia);
+}
+
+/* Estilos para el logo de Signapedia */
+.signapedia-logo {
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.signapedia-logo__img {
+    max-width: 400px; /* Mismo tamaño que Justipedia para consistencia */
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Opcional: Logo más pequeño */
+.signapedia-logo--small .signapedia-logo__img {
+    max-width: 150px;
+}
+
+/* Opcional: Logo alineado a la izquierda */
+.signapedia-logo--left {
+    text-align: left;
+}
+
+.signapedia-logo--left .signapedia-logo__img {
+    margin: 0;
 }
 
 
