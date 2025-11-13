@@ -418,8 +418,23 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-lg);
-  align-items: center;
+  /*align-items: center;*/
+  /* Asegurar que ambas columnas tengan la misma altura */
+  align-items: start; /* Cambia de 'center' a 'start' */
 }
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    min-height: 400px; /* Altura mínima consistente */
+}
+
+.about__image {
+    display: flex;
+    align-items: center; /* Centra el video verticalmente */
+}
+
 
 .about__description {
   font-size: 1.125rem;
@@ -462,6 +477,15 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--color-text-light);
+}
+
+
+/* Solución para igualar alturas MANTENIENDO el responsive */
+.about__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: start;
 }
 
 
@@ -625,34 +649,103 @@ body {
   transform: translateY(-2px);
 }
 
-/* Contenedor de video responsive */
-.video-container,
-.video-placeholder {
+/* Contenedor de video responsive BASE */
+.video-container {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-    border-radius: var(--border-radius);
+    border-radius: 12px;
     overflow: hidden;
     background: var(--color-background-alt);
+    transition: all 0.3s ease;
 }
 
-.video-container iframe,
-.video-placeholder iframe {
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: none;
+    border-radius: 10px;
 }
 
-/* Opcional: Si quieres mantener algo del estilo del placeholder */
-.video-placeholder {
-    border: 2px dashed var(--color-justipedia);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Badge decorativo base */
+.video-container::before {
+    content: '▶ Video Demo';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* CLASE ESPECÍFICA PARA JUSTIPEDIA */
+.video-container--justipedia {
+    border: 2px solid var(--color-justipedia);
+    box-shadow: 
+        0 4px 20px rgba(11, 132, 66, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.video-container--justipedia:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 30px rgba(11, 132, 66, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+    border-color: var(--color-justipedia);
+}
+
+.video-container--justipedia::before {
+    background: var(--color-justipedia);
+    box-shadow: 0 2px 8px rgba(11, 132, 66, 0.3);
+}
+
+/* CLASE ESPECÍFICA PARA SIGNAPEDIA */
+.video-container--signapedia {
+    border: 2px solid var(--color-signapedia);
+    box-shadow: 
+        0 4px 20px rgba(108, 35, 93, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.video-container--signapedia:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 30px rgba(108, 35, 93, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+    border-color: var(--color-signapedia);
+}
+
+.video-container--signapedia::before {
+    background: var(--color-signapedia);
+    box-shadow: 0 2px 8px rgba(108, 35, 93, 0.3);
+}
+
+/* También actualiza los estilos existentes para usar las clases específicas */
+.justipedia-section .video-container {
+    border: 2px solid var(--color-justipedia);
+    box-shadow: 0 4px 20px rgba(11, 132, 66, 0.15);
+}
+
+.justipedia-section .video-container::before {
+    background: var(--color-justipedia);
+    box-shadow: 0 2px 8px rgba(11, 132, 66, 0.3);
+}
+
+.signapedia-section .video-container {
+    border: 2px solid var(--color-signapedia);
+    box-shadow: 0 4px 20px rgba(108, 35, 93, 0.15);
+}
+
+.signapedia-section .video-container::before {
+    background: var(--color-signapedia);
+    box-shadow: 0 2px 8px rgba(108, 35, 93, 0.3);
 }
 
 
@@ -985,6 +1078,37 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
   font-size: 0.875rem;
 }
 
+/* Responsive Design - EXTENSIÓN para 992px */
+@media (max-width: 992px) {
+  .about__content {
+    grid-template-columns: 1fr;
+    /*gap: var(--space-lg);*/
+    gap: var(--space-xl); /* Más espacio cuando están apilados */
+  }
+
+  .about__image {
+    order: 2;
+  }
+
+  .about__text {
+    order: 1;
+    min-height: auto;
+    text-align: center; /* Opcional: centrar texto en móvil */
+  }
+
+  .about__image .video-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Ajustar stats en móvil */
+  .justipedia-section .about__stats,
+  .signapedia-section .about__stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
 
@@ -1014,10 +1138,6 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
     align-items: center;
   }
   
-  .about__content {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
   
   .about__stats {
     grid-template-columns: 1fr;
