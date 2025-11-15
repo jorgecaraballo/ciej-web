@@ -1000,11 +1000,12 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   border: 1px solid var(--color-border);
-  width: 100%; /* ✅ NUEVO - Ocupa todo el ancho disponible de la celda */
-  max-width: 400px; /* ✅ NUEVO - Límite máximo consistente */
-  min-height: 500px; /* ✅ NUEVO - Altura mínima similar */
   display: flex;
   flex-direction: column;
+  width: 100%; /* ✅ NUEVO - Ocupa todo el ancho disponible de la celda */
+  /*max-width: 400px; /* ✅ NUEVO - Límite máximo consistente */
+  /*min-height: 500px; /* ✅ NUEVO - Altura mínima similar */
+  height: 100%; /* Asegura que todos tengan misma altura */
 }
 
 .team-member:hover {
@@ -1100,6 +1101,112 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
 .credential-item a:hover {
     color: var(--color-primary);
     text-decoration: underline;
+}
+
+
+  /* Footer del Team Member */
+.team-member__footer {
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+}
+
+.team-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    justify-content: center;
+}
+
+.team-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid transparent;
+}
+
+.team-badge--principal {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Colores para cada equipo */
+.team-badge--justipedia {
+    background: var(--color-justipedia-light);
+    color: var(--color-justipedia);
+    border-color: var(--color-justipedia);
+}
+
+.team-badge--signapedia {
+    background: var(--color-signapedia-light);
+    color: var(--color-signapedia);
+    border-color: var(--color-signapedia);
+}
+
+.team-badge--tecnologico {
+    background: #e0f2fe;
+    color: #0369a1;
+    border-color: #0369a1;
+}
+
+.team-badge--investigacion {
+    background: #fef3c7;
+    color: #d97706;
+    border-color: #d97706;
+}
+
+.team-badge--coordinacion {
+    background: #f3e8ff;
+    color: #7c3aed;
+    border-color: #7c3aed;
+}
+
+.team-badge--juridico {
+    background: #dcfce7;
+    color: #16a34a;
+    border-color: #16a34a;
+}
+
+
+/* Gradientes para cada equipo */
+
+/*
+
+.team-badge--justipedia.team-badge--principal {
+    background: linear-gradient(135deg, var(--color-justipedia), #0a6e3a);
+}
+.team-badge--signapedia.team-badge--principal {
+    background: linear-gradient(135deg, var(--color-signapedia), #5a1a4a);
+}
+.team-badge--tecnologico.team-badge--principal {
+    background: linear-gradient(135deg, #0369a1, #0284c7);
+}
+.team-badge--investigacion.team-badge--principal {
+    background: linear-gradient(135deg, #d97706, #f59e0b);
+}
+.team-badge--juridico.team-badge--principal {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+.team-badge--coordinacion.team-badge--principal {
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+}
+
+*/
+
+/* Efecto hover */
+.team-member:hover .team-badge--principal {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 /* Contact Section */
@@ -1344,6 +1451,7 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
 	  min-height: auto; /* ✅ En móvil, altura automática */
     padding: var(--space-lg);
   }
+
   
   .contact__content {
     grid-template-columns: 1fr;
