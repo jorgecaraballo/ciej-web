@@ -1,9 +1,12 @@
 /* Variables CSS - Sistema de Diseño */
 :root {
   /* Colores para modo claro (default) */
-  --color-primary: #1a365d;
-  --color-secondary: #2d4a80;
+/*  --color-primary: #1a365d;*/
+  --color-primary: #1e3a5f;    /* Azul más sofisticado */
+/*  --color-secondary: #2d4a80;*/
+  --color-secondary: #334e68;  /* Azul grisáceo */
   --color-accent: #c53030;
+/*  --color-accent: #d4af37;     /* Dorado elegante en lugar de rojo */
   --color-text: #2d3748;
   --color-text-light: #718096;
   --color-background: #ffffff;
@@ -17,6 +20,9 @@
   --color-signapedia: #6c235d;        /* Color principal Signapedia */
   --color-signapedia-light: #fdf2f8;  /* Rosa claro para fondos */
   --color-signapedia-dark: #4a1a3f;   /* Púrpura oscuro */
+
+/*  --color-justipedia: #0d966b; /* Verde esmeralda */
+/*  --color-signapedia: #7d3c98; /* Púrpura profesional */
 
   /* Tipografía */
   --font-serif: 'Playfair Display', serif;
@@ -81,7 +87,8 @@ body {
 }
 
 .section {
-  padding: var(--space-xl) 0;
+/*  padding: var(--space-xl) 0;*/
+   padding: clamp(3rem, 8vw, 6rem) 0; /* Espaciado responsive */
 }
 
 .section__title {
@@ -272,6 +279,7 @@ body {
 	background-image: url('https://ciejvenezuela.com/images/Miradas-al-Avila-V-modificada5.png');
 	/*background-color: white;*/
 	background-color: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+	background-position: center;
 	/*min-height: 80%;*/
 	padding: calc(var(--space-xl) + 80px) 0 var(--space-xl);
 	position: relative;
@@ -298,7 +306,8 @@ body {
 
 .hero__title {
   font-family: var(--font-serif);
-  font-size: 3.5rem;
+  /*font-size: 3.5rem;*/
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive fluid */
   font-weight: 700;
   margin-bottom: var(--space-md);
   line-height: 1.1;
@@ -319,7 +328,7 @@ body {
 
 /* Sugerencia para mejor contraste del texto sobre la imagen */
 .hero__title, .hero__subtitle {
-/*  text-shadow: 0 2px 4px rgba(0,0,0,0.5);*/ 
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
 }
 
 .hero__actions {
@@ -884,28 +893,124 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
   color: var(--color-primary);
 }
 
+
+/* Misión y Visión */
+.team-mission-vision {
+    margin-bottom: var(--space-xl);
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mission-vision-card {
+    background: var(--color-surface);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+}
+
+.mission-vision-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.mission-vision-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+    display: block;
+}
+
+.mission-vision-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.mission-vision-text {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+/* Organigrama */
+.team-org-chart {
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.org-chart-title {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.org-chart-container {
+    background: var(--color-surface);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.org-chart-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.org-chart-caption {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    margin-top: var(--space-md);
+    font-style: italic;
+}
+
+
+
 /* Team Section */
+/* Team Section - Asegurar mismo ancho para todas las cards */
 .team__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--space-lg);
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+   justify-items: center;
 }
 
 .team-member {
   background: var(--color-surface);
-  padding: var(--space-lg);
+  /*padding: var(--space-lg);  /* Opcional: aumentar padding para más espacio interno */
+  padding: var(--space-xl); /* Más padding interno */
   border-radius: var(--border-radius);
   text-align: center;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   border: 1px solid var(--color-border);
+  width: 100%; /* ✅ NUEVO - Ocupa todo el ancho disponible de la celda */
+  max-width: 400px; /* ✅ NUEVO - Límite máximo consistente */
+  min-height: 500px; /* ✅ NUEVO - Altura mínima similar */
+  display: flex;
+  flex-direction: column;
 }
 
 .team-member:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
 }
 
 .team-member__image .image-placeholder {
@@ -919,6 +1024,26 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
   justify-content: center;
   color: var(--color-text-light);
   border: 3px solid var(--color-border);
+    position: relative;
+    margin: 0 auto var(--space-md);
+}
+
+.team-member__img {
+    width: 240px;  /* Tamaño perfecto para desktop */
+    height: 240px;
+    border-radius: 50%; /* Mantiene el círculo */
+    object-fit: cover; /* ⭐ MAGIC - recorta manteniendo proporciones */
+    object-position: center;
+    border: 3px solid var(--color-border);
+    margin: 0 auto var(--space-md);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Efecto de sombra elegante */
+    transition: all 0.3s ease;
+}
+
+.team-member:hover .team-member__img {
+    border-color: var(--color-primary);
+    box-shadow: 0 6px 20px rgba(11, 132, 66, 0.3); /* Marco de color en hover */
+    transform: scale(1.05); /* Efecto sutil al hover */
 }
 
 .team-member__name {
@@ -937,6 +1062,44 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
 .team-member__bio {
   color: var(--color-text-light);
   line-height: 1.6;
+}
+
+/* Estilos para credenciales con iconos */
+.team-member__credentials {
+    /*display: flex;
+    flex-direction: column;
+    gap: 8px;*/
+
+	text-align: left; /* Alinear credenciales a la izquierda */
+	margin-top: var(--space-md);
+	flex-grow: 1; /* ✅ NUEVO - Hace que las credenciales ocupen el espacio sobrante */
+}
+
+.credential-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: 6px 0;
+    font-size: 0.95rem;
+    /*line-height: 1.4;*/
+}
+
+.credential-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Estilos para enlaces dentro de credenciales */
+.credential-item a {
+    color: var(--color-justipedia);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.credential-item a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
 }
 
 /* Contact Section */
@@ -1078,6 +1241,7 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
   font-size: 0.875rem;
 }
 
+
 /* Responsive Design - EXTENSIÓN para 992px */
 @media (max-width: 992px) {
   .about__content {
@@ -1128,6 +1292,15 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
   .nav__toggle {
     display: flex;
   }
+
+  /* Mejorar espaciado en móvil */
+  .section {
+    padding: var(--space-lg) 0;
+  }
+
+  .section__title {
+    font-size: 2rem;
+  }
   
   .hero__title {
     font-size: 2.5rem;
@@ -1136,12 +1309,40 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
   .hero__actions {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
-  
   
   .about__stats {
     grid-template-columns: 1fr;
     gap: var(--space-sm);
+  }
+
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .mission-vision-card {
+        padding: var(--space-md);
+    }
+    
+    .org-chart-container {
+        padding: var(--space-md);
+    }
+    
+    .mission-vision-icon {
+        font-size: 2.5rem;
+    }
+
+   .team__grid {
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: var(--space-lg);
+    max-width: 400px; /* ✅ Limitar ancho en móvil */
+  }
+  
+  .team-member {
+	  min-height: auto; /* ✅ En móvil, altura automática */
+    padding: var(--space-lg);
   }
   
   .contact__content {
@@ -1159,9 +1360,6 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
     gap: var(--space-lg);
   }
   
-  .section__title {
-    font-size: 2rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1176,8 +1374,16 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
   .services__grid,
   .publications__grid,
   .team__grid {
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: var(--space-xl); /* Más espacio entre tarjetas */
+  max-width: 1400px;
+  margin: 0 auto;
   }
+    .team-member__img {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 /* Utilidades para imágenes placeholder */
@@ -1230,3 +1436,46 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
 }
 
 
+/* Para pantallas MUY grandes (opcional) */
+@media (min-width: 1400px) {
+  .team__grid {
+    grid-template-columns: repeat(2, 500px); /* Columnas fijas más anchas */
+    justify-content: center;
+    gap: var(--space-xl);
+  }
+}
+
+/* Para pantallas mayores a 1100px - Cards más anchas */
+@media (min-width: 1100px) {
+  .team__grid {
+    grid-template-columns: repeat(2, 500px); /* 2 columnas de 500px */
+    justify-content: center;
+    gap: var(--space-xl);
+    max-width: none;
+  }
+  
+  .team-member {
+    max-width: 500px;
+    min-height: 550px;
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .team-member__img {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .team-member__credentials {
+    font-size: 1.05rem; /* Texto ligeramente más legible */
+  }
+}
+
+/* REEMPLAZA con esto: */
+@media (min-width: 768px) {
+  .team__grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+  }
+}
