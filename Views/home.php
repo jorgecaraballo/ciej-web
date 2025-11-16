@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="<?= media(); ?>css/reset.css">
+    <link rel="stylesheet" href="<?= media(); ?>css/styles.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav container">
             <div class="nav__brand">
-                <img src="assets/images/webp/ciej_logo_nav_2.webp" alt="CIEJ" class="logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMxYTM2NWQiLz48dGV4dCB4PSI3NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkNJRUo8L3RleHQ+PC9zdmc+'">
+                <img src="<?= media(); ?>images/webp/ciej_logo_nav_2.webp" alt="CIEJ" class="logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMxYTM2NWQiLz48dGV4dCB4PSI3NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkNJRUo8L3RleHQ+PC9zdmc+'">
             </div>
             
             <ul class="nav__menu">
@@ -67,7 +67,7 @@
 			
 			<!-- Logo arriba del título -->
 			<div class="justipedia-logo">
-			    <img src="assets/images/webp/logo_justipedia_350.webp" alt="Justipedia" class="justipedia-logo__img">
+			    <img src="<?= media(); ?>images/webp/logo_justipedia_350.webp" alt="Justipedia" class="justipedia-logo__img">
 			</div>
 			
                         <p class="about__description">
@@ -105,7 +105,7 @@
                     <div class="about__text">
 			<!-- Logo de Signapedia -->
 			<div class="signapedia-logo">
-			    <img src="assets/images/webp/logo_signapedia_350.webp" alt="Signapedia" class="signapedia-logo__img">
+			    <img src="<?= media(); ?>images/webp/logo_signapedia_350.webp" alt="Signapedia" class="signapedia-logo__img">
 			</div>
                         <p class="about__description">
 			Es una biblioteca virtual de todos los instrumentos de contenido normativo publicados oficialmente en Venezuela, organizados de manera sistemática, por sectores y materias, señalando además su vigencia temporal y otros datos relevantes que faciliten su análisis, comprensión y ámbito de aplicación.
@@ -194,7 +194,7 @@
         <div class="team-org-chart">
             <h3 class="org-chart-title">Estructura Organizacional</h3>
             <div class="org-chart-container">
-                <img src="assets/images/webp/organigrama.webp" 
+                <img src="<?= media(); ?>images/webp/organigrama.webp" 
                      alt="Organigrama del Centro de Investigación Enciclopédica de Jurisprudencia" 
                      class="org-chart-image"
                      width="578" 
@@ -207,7 +207,7 @@
                     
 <div class="team-member"> <!-- Laura -->
     <div class="team-member__image">
-        <img src="assets/images/webp/laura.webp" alt="Laura Aguerrevere" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/laura.webp" alt="Laura Aguerrevere" class="team-member__img">
     </div>
     <h3 class="team-member__name">Laura Aguerrevere</h3>
     <p class="team-member__position">Abogado (<a href="https://www.ucab.edu.ve/" target="_blank">UCAB</a>)</p>
@@ -251,7 +251,7 @@
 
 <div class="team-member"> <!-- La kiki -->
     <div class="team-member__image">
-        <img src="assets/images/webp/kiki.webp" alt="Ángela Aguerrevere" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/kiki.webp" alt="Ángela Aguerrevere" class="team-member__img">
     </div>
     <h3 class="team-member__name">Ángela Aguerrevere</h3>
     <p class="team-member__position">Ingeniero Agrónomo (<a href="http://www.ucv.ve/" target="_blank">UCV</a>)</p>
@@ -282,7 +282,7 @@
 
 <div class="team-member"> <!-- Carol -->
     <div class="team-member__image">
-        <img src="assets/images/webp/carol.webp" alt="Carol Urbina" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/carol.webp" alt="Carol Urbina" class="team-member__img">
     </div>
     <h3 class="team-member__name">Carol Urbina P.</h3>
     <p class="team-member__position">Abogado (<a href="https://usm.edu.ve/" target="_blank">USM</a>)</p>
@@ -317,7 +317,7 @@
 
 <div class="team-member"> <!-- Paulita -->
     <div class="team-member__image">
-        <img src="assets/images/webp/paulita.webp" alt="Paula Escalante" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/paulita.webp" alt="Paula Escalante" class="team-member__img">
     </div>
     <h3 class="team-member__name">Paula Escalante</h3>
     <p class="team-member__position">Abogado (<a href="http://www.ucv.ve/" target="_blank">UCV</a>)</p>
@@ -356,7 +356,7 @@
 
 <div class="team-member"> <!-- Tiko -->
     <div class="team-member__image">
-        <img src="assets/images/webp/tiko.webp" alt="Alberto Caraballo" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/tiko.webp" alt="Alberto Caraballo" class="team-member__img">
     </div>
     <h3 class="team-member__name">Alberto Caraballo</h3>
     <p class="team-member__position">TSU Informática (<a href="https://iutv.terna.net/" target="_blank">IUTV</a>)</p>
@@ -383,7 +383,7 @@
 
 <div class="team-member"> <!-- Arriaga -->
     <div class="team-member__image">
-        <img src="assets/images/webp/arriaga.webp" alt="Luis Arriaga" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/arriaga.webp" alt="Luis Arriaga" class="team-member__img">
     </div>
     <h3 class="team-member__name">Luis Arriaga</h3>
     <p class="team-member__position">Ingeniero Agrónomo (<a href="http://www.ucv.ve/" target="_blank">UCV</a>)</p>
@@ -430,7 +430,7 @@
 
 <div class="team-member"> <!-- Lucía -->
     <div class="team-member__image">
-        <img src="assets/images/webp/lucia.webp" alt="Lucía Hernández Ríos" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/lucia.webp" alt="Lucía Hernández Ríos" class="team-member__img">
     </div>
     <h3 class="team-member__name">Lucía Hernández Ríos</h3>
     <p class="team-member__position">Abogado (<a href="http://www.ucv.ve/" target="_blank">UCV</a>)</p>
@@ -469,7 +469,7 @@
 
 <div class="team-member"> <!-- Armando -->
     <div class="team-member__image">
-        <img src="assets/images/webp/armando.webp" alt="Armando Blanco" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/armando.webp" alt="Armando Blanco" class="team-member__img">
     </div>
     <h3 class="team-member__name">Armando Blanco</h3>
     <p class="team-member__position">Abogado (<a href="http://www.ucv.ve/" target="_blank">UCV</a>)</p>
@@ -508,7 +508,7 @@
 
 <div class="team-member"> <!-- María Oropeza -->
     <div class="team-member__image">
-        <img src="assets/images/webp/oropeza.webp" alt="María Oropeza" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/oropeza.webp" alt="María Oropeza" class="team-member__img">
     </div>
     <h3 class="team-member__name">María Oropeza</h3>
     <p class="team-member__position">Abogado (<a href="http://www.ucv.ve/" target="_blank">UCV</a>)</p>
@@ -559,7 +559,7 @@
 
 <div class="team-member"> <!-- Yarina López -->
     <div class="team-member__image">
-        <img src="assets/images/webp/yarina.webp" alt="Yarina López" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/yarina.webp" alt="Yarina López" class="team-member__img">
     </div>
     <h3 class="team-member__name">Yarina López</h3>
     <p class="team-member__position">Lic. en Biología (<a href="http://www.ucv.ve/" target="_blank">UCV</a>)</p>
@@ -594,7 +594,7 @@
 
 <div class="team-member"> <!-- Zoila Caballero -->
     <div class="team-member__image">
-        <img src="assets/images/webp/zoila.webp" alt="Zoila Caballero" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/zoila.webp" alt="Zoila Caballero" class="team-member__img">
     </div>
     <h3 class="team-member__name">Zoila Caballero</h3>
     <p class="team-member__position">Abogado (<a href="https://usm.edu.ve/" target="_blank">USM</a>)</p>
@@ -637,7 +637,7 @@
 
 <div class="team-member"> <!-- María Laura Herrera A. -->
     <div class="team-member__image">
-        <img src="assets/images/webp/malala.webp" alt="María Laura Herrera A." class="team-member__img">
+        <img src="<?= media(); ?>images/webp/malala.webp" alt="María Laura Herrera A." class="team-member__img">
     </div>
     <h3 class="team-member__name">María Laura Herrera A.</h3>
     <p class="team-member__position">Ingeniero Industrial (<a href="https://www.ucab.edu.ve/" target="_blank">UCAB</a>)</p>
@@ -660,7 +660,7 @@
 
 <div id="jorge" class="team-member"> <!-- Jorge Caraballo -->
     <div class="team-member__image">
-        <img src="assets/images/webp/jorge.webp" alt="Jorge Caraballo" class="team-member__img">
+        <img src="<?= media(); ?>images/webp/jorge.webp" alt="Jorge Caraballo" class="team-member__img">
     </div>
     <h3 class="team-member__name">Jorge Caraballo</h3>
     <p class="team-member__position">Desarrollador web del <a href="#inicio">Centro de Investigación Enciclopédica de Jurisprudencia</a></p>
@@ -771,7 +771,7 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__brand">
-                    <img src="assets/images/webp/ciej_logo_nav_2.webp" alt="CIEJ" class="logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMxYTM2NWQiLz48dGV4dCB4PSI3NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkNJRUo8L3RleHQ+PC9zdmc+'">
+                    <img src="<?= media(); ?>images/webp/ciej_logo_nav_2.webp" alt="CIEJ" class="logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMxYTM2NWQiLz48dGV4dCB4PSI3NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkNJRUo8L3RleHQ+PC9zdmc+'">
                     <p class="footer__description">
                         Centro de Investigación Enciclopédica de Jurisprudencia - Excelencia en investigación jurídica desde 2008.
                     </p>
@@ -807,6 +807,6 @@
         </div>
     </footer>
 
-    <script src="js/theme.js"></script>
+    <script src="<?= media(); ?>js/theme.js"></script>
 </body>
 </html>

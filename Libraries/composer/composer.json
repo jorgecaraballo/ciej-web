@@ -1,0 +1,12 @@
+{
+    "name": "jorge/composer",
+    "authors": [
+        {
+            "name": "Jorge",
+            "email": "jorgejorgejorgejorge@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    }
+}
