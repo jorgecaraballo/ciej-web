@@ -20,8 +20,8 @@
             
             <ul class="nav__menu">
                 <li><a href="#inicio" class="nav__link">Inicio</a></li>
-  <li><a href="#justipedia" class="nav__link">Justipedia</a></li>
-  <li><a href="#signapedia" class="nav__link">Signapedia</a></li>
+		<li><a href="#justipedia" class="nav__link">Justipedia</a></li>
+		<li><a href="#signapedia" class="nav__link">Signapedia</a></li>
                 <li><a href="#servicios" class="nav__link">Investigaciones</a></li>
                 <li><a href="#equipo" class="nav__link">Equipo</a></li>
                 <li><a href="#contacto" class="nav__link">Contacto</a></li>
@@ -82,7 +82,7 @@
                                 <a href="https://justipedia.ciejvenezuela.com/" class="btn btn--justipedia" target="_blank">Ir a Justipedia</a>
                             </div>
                             <div class="stat">
-				    <a class="btn btn--read-more" href="#" target="_blank">Leer más →</a>
+			    <a class="btn btn--read-more" href="<?= base_url(); ?>justipedia">Leer más →</a>
                             </div>
                         </div>
                     </div>

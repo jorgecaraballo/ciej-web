@@ -10,12 +10,12 @@ class HomeVisitas extends Visitas {
 			}
 		}
 	}
-class Home extends Controllers { // Esta clase Controllers está en ../Libraries/Core/Controllers.php (el autoload la carga)
+class Justipedia extends Controllers { // Esta clase Controllers está en ../Libraries/Core/Controllers.php (el autoload la carga)
 	public function __construct() {
 		parent::__construct();
 		}
-	public function home() {
-		$data['page_title'] = 'Página principal';
+	public function justipedia() {
+		$data['page_title'] = get_class($this);
 		$data['page_name'] = $this->getNombreMetodo();
 		$data['controller'] = get_class($this);
 		$this->views->getView($this, $this->getNombreMetodo(), $data);

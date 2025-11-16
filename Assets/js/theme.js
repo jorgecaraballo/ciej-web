@@ -161,5 +161,41 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 3000);
         });
     }
+
+
+    // Inicializar acordeón de Justipedia si existe
+    if (document.querySelector('.justification-accordion')) {
+        initJustipediaAccordion();
+    }
+
+
 });
+
+
+// Agregar esta función al final del archivo theme.js
+function initJustipediaAccordion() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+
+        header.addEventListener('click', () => {
+            // Cerrar otros items abiertos
+            accordionItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Alternar el item actual
+            item.classList.toggle('active');
+        });
+    });
+
+    // Abrir el primer item por defecto
+    if (accordionItems.length > 0) {
+        accordionItems[0].classList.add('active');
+    }
+}
+
 
