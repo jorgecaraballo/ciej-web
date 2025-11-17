@@ -254,43 +254,235 @@
 </section>
 
         <!-- Sección: Información de una Ficha -->
-        <section class="section card-info-section">
-            <div class="container">
-                <h2 class="section__title">Información de una Ficha Jurisprudencial</h2>
-                <p class="section__subtitle">Cada ficha en Justipedia contiene información detallada y organizada</p>
-                
-                <div class="card-info-grid">
-                    <div class="info-item">
-                        <h4>🏛️ TRIBUNAL</h4>
-                        <p>Distinción entre la Extinta Corte Suprema y el actual Tribunal Supremo de Justicia</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>⚖️ SALA</h4>
-                        <p>Cada una de las Salas de la CSJ y el TSJ incluyendo a la Sala Plena</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>📝 CASO</h4>
-                        <p>Nombre del caso según el tipo de procedimiento (constitucional, civil, penal, etc.)</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>📚 MATERIA</h4>
-                        <p>Clasificación por materia según el listado especializado de Justipedia</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>📋 TIPO DE PROCEDIMIENTO</h4>
-                        <p>Procedimiento específico resuelto en la sentencia fichada</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>📁 Nº EXP.</h4>
-                        <p>Número de expediente otorgado por la Sala</p>
-                    </div>
-                    <!-- Continuar con los demás campos... -->
+<!-- Sección: Información de una Ficha - NUEVA VERSIÓN CON MOSAICO -->
+<!-- 
+✨ Características Implementadas:
+✅ 16 campos completos organizados en 5 categorías
+
+✅ Sistema de filtros intuitivo con botones
+
+✅ Animaciones suaves al filtrar
+
+✅ Diseño responsive para todos los dispositivos
+
+✅ Efectos hover para mejor interactividad
+
+✅ Contador total de campos disponibles
+
+✅ Iconos descriptivos para cada campo
+
+✅ Transiciones CSS optimizadas
+
+¡El sistema está listo! Los usuarios pueden:
+
+Ver todos los campos haciendo clic en "Todos los Campos"
+
+Filtrar por categoría específica (Identificación, Procedimiento, etc.)
+
+Explorar visualmente la relación entre campos
+
+Entender la estructura completa de las fichas jurisprudenciales
+-->
+
+<!-- 
+🎯 Opciones para Información Adicional
+✨ Características Implementadas:
+✅ Sistema no intrusivo - información oculta inicialmente
+
+✅ Un campo abierto a la vez para evitar sobrecarga visual
+
+✅ Ejemplos concretos y útiles para cada campo
+
+✅ Animaciones suaves al expandir/contraer
+
+✅ Totalmente responsive
+
+✅ Accesible con soporte para lectores de pantalla
+
+-->
+<section class="section card-info-section">
+    <div class="container">
+        <h2 class="section__title">Información de una Ficha Jurisprudencial</h2>
+        <p class="section__subtitle">Cada ficha en Justipedia contiene información detallada y organizada en diferentes categorías</p>
+
+        <!-- Filtros -->
+        <div class="mosaic-filters">
+            <button class="filter-btn active" data-filter="all">Todos los Campos</button>
+            <button class="filter-btn" data-filter="identificacion">Identificación</button>
+            <button class="filter-btn" data-filter="procedimiento">Procedimiento</button>
+            <button class="filter-btn" data-filter="contenido">Contenido</button>
+            <button class="filter-btn" data-filter="clasificacion">Clasificación</button>
+        </div>
+
+        <!-- Grid de Campos -->
+        <div class="mosaic-grid">
+            <!-- Categoría: Identificación -->
+            <div class="mosaic-item" data-category="clasificacion"> <!-- TRIBUNAL -->
+                <div class="mosaic-header">
+                    <span class="mosaic-icon">🏛️</span>
+                    <h4>TRIBUNAL</h4>
                 </div>
+                <p>Distinción entre la Extinta Corte Suprema y el actual Tribunal Supremo de Justicia</p>
             </div>
-        </section>
+
+            <div class="mosaic-item" data-category="clasificacion"> <!-- SALA -->
+                <div class="mosaic-header">
+                    <span class="mosaic-icon">🏢</span>
+                    <h4>SALA</h4>
+                </div>
+                <p>Cada una de las Salas de la CSJ y el TSJ incluyendo a la Sala Plena</p>
+            </div>
+
+<!-- Campo CASO con información adicional -->
+            <div class="mosaic-item enhanced-field" data-category="identificacion"> <!-- CASO -->
+                <div class="mosaic-header">
+			<span class="mosaic-icon">📝</span>
+			<div class="field-title-wrapper">
+			    <h4>CASO</h4>
+			    <button class="field-info-trigger" data-field="caso">
+				<span class="info-indicator">💡</span>
+				<span class="sr-only">Más información sobre este campo</span>
+			    </button>
+			</div>
+                </div>
+                <p>El nombre del caso</p>
+		    <div class="field-additional-info">
+			<div class="info-content">
+			    <p class="info-note">En este punto hay que tomar en cuenta que en el contencioso-administrativo, tributario, electoral o constitucional se utiliza únicamente el nombre del recurrente. En las demandas civiles o laborales se utiliza el nombre del demandante y el demandado y en los casos penales se utiliza el nombre del imputado.</p>
+			</div>
+		    </div>
+            </div>
+
+            <!-- Categoría: Clasificación -->
+<!-- Campo MATERIA con información adicional -->
+            <div class="mosaic-item enhanced-field " data-category="clasificacion"> <!-- MATERIA -->
+		    <div class="mosaic-header">
+			<span class="mosaic-icon">📚</span>
+			<div class="field-title-wrapper">
+			    <h4>MATERIA</h4>
+			    <button class="field-info-trigger" data-field="materia">
+				<span class="info-indicator">💡</span>
+				<span class="sr-only">Más información sobre este campo</span>
+			    </button>
+			</div>
+		    </div>
+                <p>Clasificación por materia según el listado especializado de Justipedia</p>
+		    <div class="field-additional-info">
+			<div class="info-content">
+			    <p class="info-note">El equipo de justipedia ha preparado un listado de materias asociadas con el criterio jurisprudencial fichado, cuyo menú y explicación te ofrecemos más abajo, en la sección <a style="" href="#materias">Materias de la Justipedia</a>.</p>
+			</div>
+		    </div>
+            </div>
+
+            <!-- Categoría: Procedimiento -->
+            <div class="mosaic-item" data-category="clasificacion"> <!-- TIPO DE PROCEDIMIENTO -->
+                <div class="mosaic-header">
+                    <span class="mosaic-icon">📋</span>
+                    <h4>TIPO DE PROCEDIMIENTO</h4>
+                </div>
+                <p>Se refiere al tipo de procedimiento resuelto específicamente en la sentencia fichada</p>
+            </div>
+
+            <div class="mosaic-item" data-category="identificacion"> <!-- Nº EXP. -->
+                <div class="mosaic-header">
+                    <span class="mosaic-icon">📁</span>
+                    <h4>Nº EXP.</h4>
+                </div>
+                <p>El número de expediente otorgado por la Sala</p>
+            </div>
+
+<div class="mosaic-item" data-category="identificacion"> <!-- SENTENCIA -->
+    <div class="mosaic-header">
+        <span class="mosaic-icon">⚖️</span>
+        <h4>SENTENCIA</h4>
+    </div>
+    <p>El número de sentencia otorgado por la Sala</p>
+</div>
+
+            <div class="mosaic-item" data-category="clasificacion"> <!-- PONENTE -->
+                <div class="mosaic-header">
+                    <span class="mosaic-icon">👨‍⚖️</span>
+                    <h4>PONENTE</h4>
+                </div>
+                <p>Puede ser un Magistrado o la combinación de todos bajo la denominación Ponencia Conjunta</p>
+            </div>
+
+            <div class="mosaic-item" data-category="identificacion"> <!-- FECHA SENTENCIA -->
+                <div class="mosaic-header">
+                    <span class="mosaic-icon">📅</span>
+                    <h4>FECHA SENTENCIA</h4>
+                </div>
+                <p>Fecha de publicación por la Sala</p>
+            </div>
+
+            <!-- Categoría: Contenido -->
+            <div class="mosaic-item" data-category="contenido"> <!-- TÍTULO -->
+                <div class="mosaic-header">
+                    <span class="mosaic-icon">✍️</span>
+                    <h4>TÍTULO</h4>
+                </div>
+                <p>La manera como el equipo de Justipedia identifica al tema tratado por el criterio fichado</p>
+            </div>
+
+            <div class="mosaic-item" data-category="contenido"> <!-- SÍNTESIS -->
+                <div class="mosaic-header">
+                    <span class="mosaic-icon">📄</span>
+                    <h4>SÍNTESIS</h4>
+                </div>
+                <p>Breve explicación del criterio jurisprudencial fichado</p>
+            </div>
+
+            <div class="mosaic-item" data-category="contenido"> <!-- TRANSCRIPCIÓN -->
+                <div class="mosaic-header">
+                    <span class="mosaic-icon">🖊️</span>
+                    <h4>TRANSCRIPCIÓN</h4>
+                </div>
+                <p>La transcripción de lo dicho por la Sala con respecto al criterio fichado</p>
+            </div>
+
+            <div class="mosaic-item" data-category="contenido"> <!-- DECISIÓN -->
+                <div class="mosaic-header">
+                    <span class="mosaic-icon"><i class="fas fa-gavel"></i></span>
+                    <h4>DECISIÓN</h4>
+                </div>
+                <p>Resumen de la dispositiva del fallo fichado</p>
+            </div>
+
+            <div class="mosaic-item" data-category="procedimiento">
+                <div class="mosaic-header">
+                    <span class="mosaic-icon"><i class="fas fa-vote-yea"></i></span>
+                    <h4>VOTO SALVADO Y/O RECURRENTE</h4>
+                </div>
+                <p>Aquí se expresará si algún Magistrado salvó su voto o concurre con su voto, acompañado de un breve de resumen de las razones del mismo</p>
+            </div>
+
+            <div class="mosaic-item" data-category="contenido"> <!-- NOTAS -->
+                <div class="mosaic-header">
+                    <span class="mosaic-icon"><i class="fas fa-sticky-note"></i></span>
+                    <h4>NOTAS</h4>
+                </div>
+                <p>Relaciones con otras sentencias y criterios jurisprudenciales</p>
+            </div>
+
+            <!-- Categoría: Datos Técnicos -->
+            <div class="mosaic-item" style="display: none;" data-category="tecnicos">
+                <div class="mosaic-header">
+                    <span class="mosaic-icon">🆔</span>
+                    <h4>ID ÚNICO</h4>
+                </div>
+                <p>Identificador único de la ficha en el sistema Justipedia</p>
+            </div>
+
+        </div>
+
+        <div class="mosaic-footer">
+            <p class="mosaic-note">💡 <strong>Total de campos disponibles:</strong> 15 campos organizados en 5 categorías para una búsqueda y análisis precisos</p>
+        </div>
+    </div>
+</section>
 
         <!-- Sección: Materias de Justipedia -->
-        <section class="section subjects-section">
+        <section id="materias" class="section subjects-section">
             <div class="container">
                 <h2 class="section__title">Materias de Justipedia</h2>
                 <p class="section__subtitle">22 materias especializadas para búsqueda precisa</p>
