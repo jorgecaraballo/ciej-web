@@ -26,7 +26,7 @@
             <ul class="nav__menu">
                 <li><a href="<?= base_url(); ?>" class="nav__link">Inicio</a></li>
 		<li><a href="<?= base_url(); ?>justipedia" class="nav__link nav__link--active">Justipedia</a></li>
-		<li><a href="<?= base_url(); ?>#signapedia" class="nav__link">Signapedia</a></li>
+		<li><a href="<?= base_url(); ?>signapedia" class="nav__link">Signapedia</a></li>
 		<li><a href="<?= base_url(); ?>#servicios" class="nav__link">Investigaciones</a></li>
 		<li><a href="<?= base_url(); ?>#equipo" class="nav__link">Equipo</a></li>
 		<li><a href="<?= base_url(); ?>#contacto" class="nav__link">Contacto</a></li>

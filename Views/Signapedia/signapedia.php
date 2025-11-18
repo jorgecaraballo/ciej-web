@@ -48,10 +48,10 @@
 
     <main>
         <!-- Hero Section Específico para Signapedia -->
-        <section id="inicio" class="hero hero--signapedia">
+        <section id="inicio" class="hero">
             <div class="hero__content container">
                 <div class="signapedia-hero-logo">
-                    <img src="<?= media(); ?>images/webp/logo_signapedia_350.webp" alt="Signapedia" class="signapedia-hero-logo__img">
+                    <img src="<?= media(); ?>images/webp/SignapediaSinFondo.webp" alt="Signapedia" class="signapedia-hero-logo__img">
                 </div>
                 <p class="hero__subtitle">Biblioteca Virtual de Normativa Venezolana</p>
                 <div class="hero__actions">

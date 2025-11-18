@@ -119,7 +119,7 @@
                                 <a href="https://signapedia.ciejvenezuela.com/" class="btn btn--signapedia" target="_blank">Ir a Signapedia</a>
                             </div>
                             <div class="stat">
-				    <a class="btn btn--read-more" href="#" target="_blank">Leer más →</a>
+				    <a class="btn btn--read-more" href="<?= base_url(); ?>signapedia">Leer más →</a>
                             </div>
                         </div>
                     </div>
@@ -793,8 +793,8 @@
                     <div class="footer__column">
                         <h4>Contacto</h4>
                         <ul>
-                            <li><a href="mailto:investigacion@ciejvenezuela.com">Correo Electrónico</a></li>
-                            <li><a href="tel:+582125550100">Teléfono</a></li>
+                            <li style="display: none;"><a href="mailto:investigacion@ciejvenezuela.com">Correo Electrónico</a></li>
+                            <li style="display: none;"><a href="tel:+582125550100">Teléfono</a></li>
                             <li><a href="#contacto">Formulario de Contacto</a></li>
                         </ul>
                     </div>
@@ -803,10 +803,34 @@
             
             <div class="footer__bottom">
                 <p>&copy; 2024 CIEJ - Centro de Investigación Enciclopédica de Jurisprudencia. Todos los derechos reservados.</p>
+
+		    <div class="footer__stats">
+			<div class="visitas-counter">
+			    <span class="visitas-icon">👁️</span>
+			    <span class="visitas-text">Visitas:</span>
+			    <b id="visitas"></b>
+			</div>
+		    </div>
+
             </div>
         </div>
     </footer>
 
     <script src="<?= media(); ?>js/theme.js"></script>
+<script>
+'use strict';
+const base_url = "<?= base_url(); ?>";
+</script>
+<script type="text/javascript" src="<?= media(); ?>js/modelo.js"></script> <!-- Parent Class -->
+<script type="text/javascript" src="<?= media(); ?>js/vista.js"></script> <!-- Parent Class -->
+<script type="text/javascript" src="<?= media(); ?>js/controlador.js"></script> <!-- Parent Class -->
+<script src="<?= media(); ?>js/<?= $data['page_name']; ?>/model.js"></script>
+<script src="<?= media(); ?>js/<?= $data['page_name']; ?>/view.js"></script>
+<script src="<?= media(); ?>js/<?= $data['page_name']; ?>/controller.js"></script>
+<script type="text/javascript" >
+window.addEventListener('load', function() {
+const app = new Controller(new Model("<?= $data['controller']; ?>".toLowerCase(), "<?= $data['page_name']; ?>"), new View("<?= $data['controller']; ?>"));
+        }, false);
+</script>
 </body>
 </html>

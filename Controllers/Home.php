@@ -20,26 +20,17 @@ class Home extends Controllers { // Esta clase Controllers está en ../Libraries
 		$data['controller'] = get_class($this);
 		$this->views->getView($this, $this->getNombreMetodo(), $data);
 		}
-	public function getVisitas($params) { // En los controladores, considerar validación de entrada
-		// Validar y sanitizar $params antes de usar
-		$params = filter_var($params, FILTER_SANITIZE_STRING);
+	public function factorComunVisitas($params) {
 		$ob = new HomeVisitas;
-		if (strlen($params) > 0) {
-			$ob->fueraDelConstructor($params);
-			}
-		else {
-			$ob->fueraDelConstructor(get_class($this));
-			}
+		$ob->fueraDelConstructor(strlen($params) > 0 ? $params : get_class($this));
+		return $ob;
+		}
+	public function getVisitas($params) {
+		$ob = $this->factorComunVisitas($params);
 		$ob->getVisitas();
 		}
 	public function postVisitas($params) {
-		$ob = new HomeVisitas;
-		if (strlen($params) > 0) {
-			$ob->fueraDelConstructor($params);
-			}
-		else {
-			$ob->fueraDelConstructor(get_class($this));
-			}
+		$ob = $this->factorComunVisitas($params);
 		$ob->postVisitas();
 		}
 	}

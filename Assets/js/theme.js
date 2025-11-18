@@ -11,7 +11,7 @@ Funcionalidades que ya tienes:
 class ThemeManager {
     constructor() {
         this.themeToggle = document.getElementById('themeToggle');
-        this.systemPreference = window.matchMedia('(prefers-color-scheme: dark)');
+        this.systemPreference = window.matchMedia('(prefers-color-scheme: light)');
         this.currentTheme = this.getSavedTheme();
         
         this.init();
