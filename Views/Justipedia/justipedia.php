@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="<?= media(); ?>css/justipedia.css">
 </head>
 <body>
-    <!-- Mismo Header que index.html -->
     <header class="header">
         <nav class="nav container">
             <div class="nav__brand">
@@ -1003,10 +1002,34 @@ Entender la estructura completa de las fichas jurisprudenciales
             
             <div class="footer__bottom">
                 <p>&copy; 2024 CIEJ - Centro de Investigación Enciclopédica de Jurisprudencia. Todos los derechos reservados.</p>
+
+		    <div class="footer__stats">
+			<div class="visitas-counter">
+			    <span class="visitas-icon">👁️</span>
+			    <span class="visitas-text">Visitas:</span>
+			    <b id="visitas"></b>
+			</div>
+		    </div>
+
             </div>
         </div>
     </footer>
 
     <script src="<?= media(); ?>js/theme.js"></script>
+<script>
+'use strict';
+const base_url = "<?= base_url(); ?>";
+</script>
+<script type="text/javascript" src="<?= media(); ?>js/modelo.js"></script> <!-- Parent Class -->
+<script type="text/javascript" src="<?= media(); ?>js/vista.js"></script> <!-- Parent Class -->
+<script type="text/javascript" src="<?= media(); ?>js/controlador.js"></script> <!-- Parent Class -->
+<script src="<?= media(); ?>js/<?= $data['page_name']; ?>/model.js"></script>
+<script src="<?= media(); ?>js/<?= $data['page_name']; ?>/view.js"></script>
+<script src="<?= media(); ?>js/<?= $data['page_name']; ?>/controller.js"></script>
+<script type="text/javascript" >
+window.addEventListener('load', function() {
+const app = new Controller(new Model("<?= $data['controller']; ?>".toLowerCase(), "<?= $data['page_name']; ?>"), new View("<?= $data['controller']; ?>"));
+        }, false);
+</script>
 </body>
 </html>

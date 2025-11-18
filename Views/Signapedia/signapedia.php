@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="<?= media(); ?>css/reset.css">
     <link rel="stylesheet" href="<?= media(); ?>css/styles.css">
@@ -885,11 +886,35 @@ https://api.ciejvenezuela.com/asamblea/v1/controller/fichas.php</code></pre>
 
             <div class="footer__bottom">
                 <p>&copy; 2024 CIEJ - Centro de Investigación Enciclopédica de Jurisprudencia. Todos los derechos reservados.</p>
+
+		    <div class="footer__stats">
+			<div class="visitas-counter">
+			    <span class="visitas-icon">👁️</span>
+			    <span class="visitas-text">Visitas:</span>
+			    <b id="visitas"></b>
+			</div>
+		    </div>
+
             </div>
         </div>
     </footer>
 
     <script src="<?= media(); ?>js/theme.js"></script>
+<script>
+'use strict';
+const base_url = "<?= base_url(); ?>";
+</script>
+<script type="text/javascript" src="<?= media(); ?>js/modelo.js"></script> <!-- Parent Class -->
+<script type="text/javascript" src="<?= media(); ?>js/vista.js"></script> <!-- Parent Class -->
+<script type="text/javascript" src="<?= media(); ?>js/controlador.js"></script> <!-- Parent Class -->
+<script src="<?= media(); ?>js/<?= $data['page_name']; ?>/model.js"></script>
+<script src="<?= media(); ?>js/<?= $data['page_name']; ?>/view.js"></script>
+<script src="<?= media(); ?>js/<?= $data['page_name']; ?>/controller.js"></script>
+<script type="text/javascript" >
+window.addEventListener('load', function() {
+const app = new Controller(new Model("<?= $data['controller']; ?>".toLowerCase(), "<?= $data['page_name']; ?>"), new View("<?= $data['controller']; ?>"));
+        }, false);
+</script>
     <script>
         // Función para copiar código
         function copyCode(button) {

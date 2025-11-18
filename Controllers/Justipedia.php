@@ -21,7 +21,6 @@ class Justipedia extends Controllers { // Esta clase Controllers está en ../Lib
 		$this->views->getView($this, $this->getNombreMetodo(), $data);
 		}
 	public function factorComunVisitas($params) {
-		$params = filter_var($params, FILTER_SANITIZE_STRING);
 		$ob = new HomeVisitas;
 		$ob->fueraDelConstructor(strlen($params) > 0 ? $params : get_class($this));
 		return $ob;
