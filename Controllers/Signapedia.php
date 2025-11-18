@@ -10,16 +10,18 @@ class HomeVisitas extends Visitas {
 			}
 		}
 	}
-class Justipedia extends Controllers { // Esta clase Controllers está en ../Libraries/Core/Controllers.php (el autoload la carga)
-	public function __construct() {
-		parent::__construct();
-		}
-	public function justipedia() {
-		$data['page_title'] = get_class($this);
-		$data['page_name'] = $this->getNombreMetodo();
-		$data['controller'] = get_class($this);
-		$this->views->getView($this, $this->getNombreMetodo(), $data);
-		}
+
+class Signapedia extends Controllers { // Esta clase Controllers está en ../Libraries/Core/Controllers.php (el autoload la carga)
+    public function __construct() {
+        parent::__construct();
+    }
+    
+    public function signapedia() {
+	$data['page_title'] = 'Signapedia - Biblioteca Virtual de Normativa Venezolana';
+        $data['page_name'] = $this->getNombreMetodo();
+        $data['controller'] = get_class($this);
+        $this->views->getView($this, $this->getNombreMetodo(), $data);
+    }
 	public function factorComunVisitas($params) {
 		$params = filter_var($params, FILTER_SANITIZE_STRING);
 		$ob = new HomeVisitas;

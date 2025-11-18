@@ -50,7 +50,7 @@
 
     <main>
         <!-- Hero Section Específico para Justipedia -->
-        <section class="hero">
+        <section id="inicio" class="hero">
             <div class="hero__content container">
                 <div class="justipedia-hero-logo">
                     <img src="<?= media(); ?>images/webp/JustipediaSinFondo.webp" alt="Justipedia" class="justipedia-hero-logo__img">
@@ -494,7 +494,7 @@ Entender la estructura completa de las fichas jurisprudenciales
     <div class="info-highlight-content">
         <span class="info-highlight-icon">💡</span>
         <p class="info-highlight-text">
-            Cada ficha elaborada por el equipo de Justipedia ha sido clasificada por materia, siguiendo los parámetros que se muestran a continuación. Este campo se mostrará como un menú cerrado en el filtro respectivo (una vez que se ingresa en Justipedia), para facilitar la búsqueda al usuario. A continuación se muestran las materias de la Justipedia.
+	    Cada ficha elaborada por el equipo de Justipedia, ha sido clasificada por materia, para facilitar la búsqueda al usuario una vez que ha iniciado sesión en Justipedia. A continuación se muestran estas materias.
         </p>
     </div>
 </div>
@@ -957,7 +957,7 @@ Entender la estructura completa de las fichas jurisprudenciales
                         <a href="https://justipedia.ciejvenezuela.com/" class="btn btn--justipedia btn--large" target="_blank">
                             Ir a Justipedia
                         </a>
-                        <a href="index.html#contacto" class="btn btn--secondary">
+                        <a href="<?= base_url(); ?>#contacto" class="btn btn--secondary">
                             Contactar al Equipo
                         </a>
                     </div>
@@ -981,21 +981,21 @@ Entender la estructura completa de las fichas jurisprudenciales
                     <div class="footer__column">
                         <h4>Enlaces Rápidos</h4>
                         <ul>
-				<li><a href="#inicio">Inicio</a></li>
-				<li><a href="#justipedia">Justipedia</a></li>
-				<li><a href="#signapedia">Signapedia</a></li>
-				<li><a href="#servicios">Investigaciones</a></li>
-				<li><a href="#equipo">Equipo</a></li>
-				<li><a href="#contacto">Contacto</a></li>
+				<li><a href="<?= base_url(); ?>#inicio">Inicio</a></li>
+				<li><a href="<?= base_url(); ?>justipedia#inicio">Justipedia</a></li>
+				<li><a href="<?= base_url(); ?>signapedia">Signapedia</a></li>
+				<li><a href="<?= base_url(); ?>#servicios">Investigaciones</a></li>
+				<li><a href="<?= base_url(); ?>#equipo">Equipo</a></li>
+				<li><a href="<?= base_url(); ?>#contacto">Contacto</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer__column">
                         <h4>Contacto</h4>
                         <ul>
-                            <li><a href="mailto:investigacion@ciejvenezuela.com">Correo Electrónico</a></li>
-                            <li><a href="tel:+582125550100">Teléfono</a></li>
-                            <li><a href="#contacto">Formulario de Contacto</a></li>
+                            <li style="display: none;"><a href="mailto:investigacion@ciejvenezuela.com">Correo Electrónico</a></li>
+                            <li style="display: none;"><a href="tel:+582125550100">Teléfono</a></li>
+                            <li><a href="<?= base_url(); ?>#contacto">Formulario de Contacto</a></li>
                         </ul>
                     </div>
                 </div>

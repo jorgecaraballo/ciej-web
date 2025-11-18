@@ -724,11 +724,11 @@
                         </p>
                         
                         <div class="contact__details">
-                            <div class="contact__item">
+                            <div class="contact__item" style="display: none;">
                                 <span class="contact__icon">📧</span>
                                 <span>investigacion@ciejvenezuela.com</span>
                             </div>
-                            <div class="contact__item">
+                            <div class="contact__item" style="display: none;">
                                 <span class="contact__icon">📞</span>
                                 <span>+58 212-555-0100</span>
                             </div>
