@@ -255,6 +255,7 @@
 
         <!-- Sección: Información de una Ficha -->
 <!-- Sección: Información de una Ficha - NUEVA VERSIÓN CON MOSAICO -->
+<!-- El sistema de mosaicos con filtros hace que una gran cantidad de información sea fácilmente accesible sin abrumar al usuario, manteniendo la integridad de todos los datos. -->
 <!-- 
 ✨ Características Implementadas:
 ✅ 16 campos completos organizados en 5 categorías
@@ -481,29 +482,470 @@ Entender la estructura completa de las fichas jurisprudenciales
     </div>
 </section>
 
-        <!-- Sección: Materias de Justipedia -->
-        <section id="materias" class="section subjects-section">
-            <div class="container">
-                <h2 class="section__title">Materias de Justipedia</h2>
-                <p class="section__subtitle">22 materias especializadas para búsqueda precisa</p>
-                
-                <div class="subjects-grid">
-                    <div class="subject-card">
-                        <h4>1. Administrativo</h4>
-                        <p>Criterios que resuelvan algún asunto relacionado con la parte positiva del derecho administrativo.</p>
-                    </div>
-                    <div class="subject-card">
-                        <h4>2. Aduanas</h4>
-                        <p>Criterios relativos a los procedimientos de importación y exportación de mercancías.</p>
-                    </div>
-                    <div class="subject-card">
-                        <h4>3. Agrario</h4>
-                        <p>Criterios relativos a los procesos agrarios.</p>
-                    </div>
-                    <!-- Continuar con las demás materias... -->
+        <!-- Sección: Materias de la Justipedia -->
+<!-- Cards Interactivas con Estadísticas para las materias de la Justipedia -->
+<!-- Sección: Materias de Justipedia - NUEVA VERSIÓN CON CARDS INTERACTIVAS -->
+<section class="section subjects-section">
+    <div class="container">
+        <h2 class="section__title">Materias de Justipedia</h2>
+        <p class="section__subtitle">22 materias especializadas para búsqueda y clasificación precisa de criterios jurisprudenciales</p>
+        
+<div class="info-highlight-card">
+    <div class="info-highlight-content">
+        <span class="info-highlight-icon">💡</span>
+        <p class="info-highlight-text">
+            Cada ficha elaborada por el equipo de Justipedia ha sido clasificada por materia, siguiendo los parámetros que se muestran a continuación. Este campo se mostrará como un menú cerrado en el filtro respectivo (una vez que se ingresa en Justipedia), para facilitar la búsqueda al usuario. A continuación se muestran las materias de la Justipedia.
+        </p>
+    </div>
+</div>
+
+        <!-- Grid de Materias -->
+        <div class="materias-grid" id="materiasGrid">
+            
+            <!-- Materia 1: Administrativo -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">1</div>
+                    <h3 class="materia-title">Administrativo</h3>
+                    <span class="materia-count">400 criterios</span>
+                </div>
+                <p class="materia-description">Criterios que resuelvan algún asunto relacionado con la parte positiva del derecho administrativo.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        6.43% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
                 </div>
             </div>
-        </section>
+
+            <!-- Materia 2: Aduanas -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">2</div>
+                    <h3 class="materia-title">Aduanas</h3>
+                    <span class="materia-count">46 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a los procedimientos de importación y exportación de mercancías, que no sean de contenido tributario.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        0.74% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 3: Agrario -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">3</div>
+                    <h3 class="materia-title">Agrario</h3>
+                    <span class="materia-count">93 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a los procesos agrarios.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        1.49% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 4: Amparo -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">4</div>
+                    <h3 class="materia-title">Amparo</h3>
+                    <span class="materia-count">363 criterios</span>
+                </div>
+                <p class="materia-description">Criterios referidos a la parte procesal de la acción de amparo, su contenido y alcance.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        5.83% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 5: Civil -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">5</div>
+                    <h3 class="materia-title">Civil</h3>
+                    <span class="materia-count">219 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a derechos civiles y aplicación de normas sustantivas en materia civil.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        3.52% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 6: Constitucional -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">6</div>
+                    <h3 class="materia-title">Constitucional</h3>
+                    <span class="materia-count">370 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos al contenido y alcance derechos constitucionales; así como relativos a la institucionalidad de los Poderes Públicos o la parte programática de la Constitución.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        5.95% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 7: Contencioso Administrativo -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">7</div>
+                    <h3 class="materia-title">Contencioso Administrativo</h3>
+                    <span class="materia-count">502 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a la parte procesal del derecho administrativo.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        8.07% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 8: Electoral-->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">8</div>
+                    <h3 class="materia-title">Electoral</h3>
+                    <span class="materia-count">141 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a la parte positiva y adjetiva de los recursos contencioso-electorales.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        2.27% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 9: Familia -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">9</div>
+                    <h3 class="materia-title">Familia</h3>
+                    <span class="materia-count">159 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a la materia de niños y adolescentes, vínculo matrimonial y sucesiones que no se refieran a aspectos tributarios.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        2.56% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 10: Funcionarial -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">10</div>
+                    <h3 class="materia-title">Funcionarial</h3>
+                    <span class="materia-count">85 criterios</span>
+                </div>
+                <p class="materia-description">Cualquier criterio que se refiera al contenido y alcance de la Función Pública, la relación entre los empleados, trabajadores y obreros públicos y la Administración; excluyendo aquí los aspectos procesales, que pertenecen a la materia contencioso administrativo.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        1.37% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 11: Inquilinario -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">11</div>
+                    <h3 class="materia-title">Inquilinario</h3>
+                    <span class="materia-count">78 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a procedimientos de desalojo o regulación de alquileres, o en aquellos en que haya participado de alguna manera una autoridad pública para controlar la actividad de arrendamientos en general.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        1.25% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 12: Internacional -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">12</div>
+                    <h3 class="materia-title">Internacional</h3>
+                    <span class="materia-count">118 criterios</span>
+                </div>
+                <p class="materia-description">Criterios en los que se apliquen normas de derecho internacional bien sea público o privado, o cuestiones de jurisdicción internacional.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        1.90% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 13: Laboral -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">13</div>
+                    <h3 class="materia-title">Laboral</h3>
+                    <span class="materia-count">551 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a las relaciones de trabajo en el ámbito privado.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        8.85% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 14: Mercantil -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">14</div>
+                    <h3 class="materia-title">Mercantil</h3>
+                    <span class="materia-count">53 criterios</span>
+                </div>
+                <p class="materia-description">Criterios de aplicación de normas de derecho mercantil como el Código de Comercio o que analice derechos de los comerciantes.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        0.85% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 15: Municipal -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">15</div>
+                    <h3 class="materia-title">Municipal</h3>
+                    <span class="materia-count">30 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos al desenvolvimiento y funcionamiento de los Municipios; excluyendo el ámbito tributario.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        0.48% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 16: Penal -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">16</div>
+                    <h3 class="materia-title">Penal</h3>
+                    <span class="materia-count">31 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a la aplicación del derecho positivo Penal.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        0.50% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 17: Procesal -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">17</div>
+                    <h3 class="materia-title">Procesal</h3>
+                    <span class="materia-count">1962 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a la aplicación de normas procesales, excluyendo las penales y las que pertenecen a otros ámbitos procesales definidos por otras materias.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        31.53% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 18: Procesal Constitucional -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">18</div>
+                    <h3 class="materia-title">Procesal Constitucional</h3>
+                    <span class="materia-count">174 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relacionados con los siguientes procesos constitucionales: la acción de inconstitucionalidad, las controversias constitucionales, la omisión constitucional, la revisión constitucional, consultas sobre el carácter orgánico de las leyes, colisiones de leyes, el control preventivo de la constitucionalidad de las leyes y los tratados, el recurso de interpretación constitucional, el avocamiento (cuando es resuelto por la Sala Constitucional) y las demandas por intereses colectivos o difusos.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        2.80% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 19: Procesal Penal -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">19</div>
+                    <h3 class="materia-title">Procesal Penal</h3>
+                    <span class="materia-count">389 criterios</span>
+                </div>
+                <p class="materia-description">Criterios de aplicación de cualquier normativa adjetiva en materia penal.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        6.25% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 20: Propiedad Intelectual -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">20</div>
+                    <h3 class="materia-title">Propiedad Intelectual</h3>
+                    <span class="materia-count">14 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a la aplicación de normas relativas a Marcas y sobre Libre competencia.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        0.22% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 21: Registral -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">21</div>
+                    <h3 class="materia-title">Registral</h3>
+                    <span class="materia-count">32 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relacionados con la inscripción y acceso a información de Oficinas de Registro de cualquier tipo.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        0.51% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+            <!-- Materia 22: Tributario -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    <div class="materia-number">22</div>
+                    <h3 class="materia-title">Tributario</h3>
+                    <span class="materia-count">413 criterios</span>
+                </div>
+                <p class="materia-description">Criterios relativos a análisis de tributos; así como sobre procedimientos seguidos por la autoridades tributaries en los 3 niveles politico-territoriales; excluyendo todo lo relativo a la materia aduanal.</p>
+                <div class="materia-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-pie"></i>
+                        6.64% del total
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        Actualizado: 2025
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
         <!-- CTA Section -->
         <section class="section cta-section">

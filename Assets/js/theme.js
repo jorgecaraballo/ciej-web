@@ -178,8 +178,8 @@ document.addEventListener('DOMContentLoaded', () => {
         initEnhancedFields();
     }
 
-});
 
+});
 
 // Agregar esta función al final del archivo theme.js
 function initJustipediaAccordion() {
@@ -206,7 +206,6 @@ function initJustipediaAccordion() {
         accordionItems[0].classList.add('active');
     }
 }
-
 
 // Agregar esta función al final del archivo theme.js
 function initMosaicFilters() {
@@ -283,3 +282,4 @@ function initEnhancedFields() {
         }
     });
 }
+

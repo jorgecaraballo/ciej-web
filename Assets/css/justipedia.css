@@ -146,6 +146,75 @@
     color: white;
 }
 
+/* Mejoras para el botón Justipedia en CTA */
+.cta-section .btn--justipedia {
+    background: var(--color-justipedia);
+    color: white;
+    border: 2px solid var(--color-justipedia);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn--justipedia:hover {
+    background: white;
+    color: var(--color-justipedia);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(11, 132, 66, 0.3);
+}
+
+/* Para modo oscuro */
+[data-theme="dark"] .cta-section .btn--justipedia:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: white;
+}
+
+/* Efecto de brillo opcional */
+.cta-section .btn--justipedia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-section .btn--justipedia:hover::before {
+    left: 100%;
+}
+
+/* Mejoras para el botón secundario en CTA */
+.cta-section .btn--secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn--secondary:hover {
+    background: white;
+    color: var(--color-justipedia);
+    border-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Para modo oscuro - asegurar contraste */
+[data-theme="dark"] .cta-section .btn--secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .cta-section .btn--secondary:hover {
+    background: white;
+    color: var(--color-primary);
+    border-color: white;
+}
+
 .btn--large {
     padding: 15px 40px;
     font-size: 1.1rem;
@@ -550,6 +619,193 @@
 }
 
 
+/* Estilos para el Sistema de Materias con Cards Interactivas */
+
+/* Agregar al CSS */
+.info-highlight-card {
+    background: linear-gradient(135deg, var(--color-justipedia-light) 0%, rgba(11, 132, 66, 0.1) 100%);
+    border: 1px solid var(--color-justipedia);
+    border-radius: var(--border-radius);
+    padding: var(--space-lg);
+    margin: var(--space-xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--color-justipedia);
+}
+
+.info-highlight-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.info-highlight-icon {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: var(--space-md);
+    display: block;
+}
+
+.info-highlight-text {
+    font-size: 1rem;
+    text-align: justify;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 
+ * Comportamiento Responsive:
+En pantallas grandes: Muestra 3-4 columnas (dependiendo del ancho)
+
+En tablets: Muestra 2 columnas
+
+En móviles: Muestra 1 columna (gracias al minmax(350px, 1fr))
+
+Ventajas:
+✅ Responsive automático - Se adapta sin media queries
+
+✅ Espaciado consistente - Gap uniforme entre elementos
+
+✅ Flexibilidad - Las tarjetas crecen/shrinken según espacio
+
+✅ Ordenamiento inteligente - Se reordenan automáticamente
+
+Es el sistema ideal para galerías de contenido como esta sección de materias.
+ * */
+.materias-grid {
+    display: grid; /* display: grid - Activa el sistema de grid CSS */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* - Esto significa:
+
+auto-fill: Crea tantas columnas como quepan en el contenedor
+
+minmax(350px, 1fr): Cada columna tiene mínimo 350px y máximo 1 fracción del espacio disponible
+
+Resultado: Las tarjetas se organizan automáticamente en columnas de al menos 350px */
+    gap: var(--space-lg); /* - Espacio entre tarjetas (normalmente 1.5-2rem) */
+    margin-bottom: var(--space-xl); /* - Margen inferior grande (normalmente 3-4rem) */
+}
+
+.materia-card {
+    background: var(--color-surface);
+    /* padding: var(--space-lg); */
+    /* Reducir el padding inferior si es necesario */
+    padding: var(--space-lg) var(--space-lg) var(--space-md); /* menos abajo */
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.materia-card::before { /* Este es el borde lateral izquierdo */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-justipedia);
+    transition: var(--transition);
+}
+
+.materia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-justipedia);
+}
+
+.materia-card:hover::before {
+    width: 6px;
+    background: var(--color-primary);
+}
+
+.materia-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.materia-number {
+    background: var(--color-justipedia);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.materia-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin: 0;
+    flex: 1;
+}
+
+.materia-count {
+    background: var(--color-justipedia-light);
+    color: var(--color-justipedia);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.materia-description {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+    font-size: 0.95rem;
+}
+
+.materia-stats {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+.stat-item i {
+    color: var(--color-justipedia);
+    font-size: 0.8rem;
+}
+
+
+/* Estados de filtrado */
+.materia-card.hidden {
+    display: none;
+}
+
+.materia-card.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+}
 
 
 /* Responsive */
@@ -622,6 +878,20 @@
     .info-content {
         padding: var(--space-xs);
     }
+
+    .materias-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .materia-header {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: flex-start;
+    }
+    
+    .materia-count {
+        align-self: flex-start;
+    }
 }
 
 @media (max-width: 576px) {
@@ -646,6 +916,15 @@
     
     .mosaic-icon {
         font-size: 1.25rem;
+    }
+
+    .materia-card {
+        padding: var(--space-md);
+    }
+    
+    .materia-stats {
+        flex-direction: column;
+        gap: var(--space-sm);
     }
 }
 
