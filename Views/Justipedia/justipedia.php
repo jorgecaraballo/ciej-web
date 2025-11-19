@@ -1015,7 +1015,7 @@ Entender la estructura completa de las fichas jurisprudenciales
         </div>
     </footer>
 
-    <script src="<?= media(); ?>js/theme.js"></script>
+<script src="<?= media(); ?>js/theme.js"></script>
 <script>
 'use strict';
 const base_url = "<?= base_url(); ?>";

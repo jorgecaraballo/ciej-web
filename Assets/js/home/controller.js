@@ -3,6 +3,7 @@ class Controller extends Controlador {
 	constructor(model, view) {
 		super(model, view);
 		this.checkCookie();
+		//this.manejoFormulario();
 		}
 	checkCookie = () => {
 		let laCookie = this.model.getCookie(this.model.getMetodo());
@@ -28,4 +29,7 @@ class Controller extends Controlador {
 			console.log(err, objData);
 			}
 		};
+	manejoFormulario = () => {
+			this.view.manejoFormulario();
+			};
 	}

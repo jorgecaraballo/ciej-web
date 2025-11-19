@@ -3,6 +3,9 @@ class Controller extends Controlador {
 	constructor(model, view) {
 		super(model, view);
 		this.checkCookie();
+		this.acordeonJustipedia();
+		this.filtrosMosaico();
+		this.camposMejorados();
 		}
 	checkCookie = () => {
 		let laCookie = this.model.getCookie(this.model.getMetodo());
@@ -27,5 +30,14 @@ class Controller extends Controlador {
 		else {
 			console.log(err, objData);
 			}
+		};
+	acordeonJustipedia = () => {
+		this.view.acordeonJustipedia();
+		};
+	filtrosMosaico = () => {
+		this.view.filtrosMosaico();
+		};
+	camposMejorados = () => {
+		this.view.camposMejorados();
 		};
 	}

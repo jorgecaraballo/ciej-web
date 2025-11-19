@@ -4,6 +4,9 @@ class Controlador {
 		this.model = model;
 		this.view = view;
 		//this.getCookies(); // Busco la "configuración" de las cookies en Config.php
+		this.smoothScrolling();
+		this.themeManager();
+		this.headerScroll();
 		}
 	getCookies = () => {
 		this.model._ajax('GET', 'getCookies', null, this.handleGetCookies);
@@ -37,5 +40,14 @@ class Controlador {
 		// Aquí es que puedo dar "luz verde" a las inicializaciones que tengan que ver con el tema
 		// porque ya tengo definida la propiedad tema en el model, antes no (y por ende es undefined)
 		this.inicializadorClaroscuro();
+		};
+	smoothScrolling = () => { // Smooth scrolling para enlaces internos
+		this.view.smoothScrolling();
+		};
+	themeManager = () => {
+		this.view.themeManager();
+		};
+	headerScroll = () => {
+		this.view.headerScroll();
 		};
 	}
