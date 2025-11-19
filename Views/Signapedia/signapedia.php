@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="<?= media(); ?>css/reset.css">
     <link rel="stylesheet" href="<?= media(); ?>css/styles.css">
+    <link rel="stylesheet" href="<?= media(); ?>css/justipedia.css">
     <link rel="stylesheet" href="<?= media(); ?>css/signapedia.css">
 </head>
 <body>
@@ -915,32 +916,5 @@ window.addEventListener('load', function() {
 const app = new Controller(new Model("<?= $data['controller']; ?>".toLowerCase(), "<?= $data['page_name']; ?>"), new View("<?= $data['controller']; ?>"));
         }, false);
 </script>
-    <script>
-        // Función para copiar código
-        function copyCode(button) {
-            const codeBlock = button.closest('.code-block');
-            const code = codeBlock.querySelector('code').textContent;
-            navigator.clipboard.writeText(code).then(() => {
-                const originalText = button.textContent;
-                button.textContent = '✅ Copiado!';
-                setTimeout(() => {
-                    button.textContent = originalText;
-                }, 2000);
-            });
-        }
-
-        // Inicializar componentes específicos de Signapedia
-        document.addEventListener('DOMContentLoaded', function() {
-            // Inicializar acordeón si existe
-            if (document.querySelector('.justification-accordion')) {
-                initJustipediaAccordion();
-            }
-
-            // Inicializar mosaico si existe
-            if (document.querySelector('.mosaic-filters')) {
-                initMosaicFilters();
-            }
-        });
-    </script>
 </body>
 </html>

@@ -308,10 +308,9 @@ Entender la estructura completa de las fichas jurisprudenciales
         <!-- Filtros -->
         <div class="mosaic-filters">
             <button class="filter-btn active" data-filter="all">Todos los Campos</button>
-            <button class="filter-btn" data-filter="identificacion">Identificación</button>
-            <button class="filter-btn" data-filter="procedimiento">Procedimiento</button>
-            <button class="filter-btn" data-filter="contenido">Contenido</button>
             <button class="filter-btn" data-filter="clasificacion">Clasificación</button>
+            <button class="filter-btn" data-filter="identificacion">Identificación</button>
+            <button class="filter-btn" data-filter="contenido">Contenido</button>
         </div>
 
         <!-- Grid de Campos -->
@@ -448,7 +447,7 @@ Entender la estructura completa de las fichas jurisprudenciales
                 <p>Resumen de la dispositiva del fallo fichado</p>
             </div>
 
-            <div class="mosaic-item" data-category="procedimiento">
+            <div class="mosaic-item" data-category="contenido">
                 <div class="mosaic-header">
                     <span class="mosaic-icon"><i class="fas fa-vote-yea"></i></span>
                     <h4>VOTO SALVADO Y/O RECURRENTE</h4>
