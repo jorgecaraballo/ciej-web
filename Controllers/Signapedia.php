@@ -22,6 +22,12 @@ class Signapedia extends Controllers { // Esta clase Controllers está en ../Lib
         $data['controller'] = get_class($this);
         $this->views->getView($this, $this->getNombreMetodo(), $data);
     }
+    public function apidoc() {
+	$data['page_title'] = 'Signapedia - Documentación API Signapedia';
+        $data['page_name'] = $this->getNombreMetodo();
+        $data['controller'] = get_class($this);
+        $this->views->getView($this, $this->getNombreMetodo(), $data);
+    }
 	public function factorComunVisitas($params) {
 		$ob = new HomeVisitas;
 		$ob->fueraDelConstructor(strlen($params) > 0 ? $params : get_class($this));

@@ -14,19 +14,12 @@ class View extends Vista {
 			}
 		};
 	filtrosMosaico = () => {
-		// Inicializar mosaico con filtros si existe
-		if (document.querySelector('.mosaic-filters')) {
-			this.initMosaicFilters();
-			}
-		};
-	camposMejorados = () => {
-		// Inicializar campos mejorados
-		if (document.querySelector('.enhanced-field')) {
-			this.initEnhancedFields();
-			}
+    // Inicializar mosaico con filtros si existe
+    if (document.querySelector('.mosaic-filters')) {
+        this.initMosaicFilters();
+    }
 		};
 	initJustipediaAccordion = () => { // Inicializar acordeón de Justipedia si existe
-		// Agregar esta función al final del archivo theme.js
 		const accordionItems = document.querySelectorAll('.accordion-item');
 
 		accordionItems.forEach(item => {
@@ -85,41 +78,15 @@ class View extends Vista {
         });
     });
 		};
-	initEnhancedFields = () => { // Función para los campos con información adicional
-    const infoTriggers = document.querySelectorAll('.field-info-trigger');
-
-    infoTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function() {
-            const fieldItem = this.closest('.enhanced-field');
-            const isCurrentlyActive = fieldItem.classList.contains('active');
-
-            // Cerrar todos los campos abiertos
-            document.querySelectorAll('.enhanced-field.active').forEach(activeField => {
-                if (activeField !== fieldItem) {
-                    activeField.classList.remove('active');
-                    activeField.querySelector('.field-info-trigger').classList.remove('active');
-                }
-            });
-
-            // Alternar el campo actual
-            if (!isCurrentlyActive) {
-                fieldItem.classList.add('active');
-                this.classList.add('active');
-            } else {
-                fieldItem.classList.remove('active');
-                this.classList.remove('active');
-            }
-        });
-    });
-
-    // Cerrar al hacer click fuera
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.enhanced-field')) {
-            document.querySelectorAll('.enhanced-field.active').forEach(field => {
-                field.classList.remove('active');
-                field.querySelector('.field-info-trigger').classList.remove('active');
-            });
-        }
-    });
+	copyCode = (button) => { // Función para copiar código
+		const codeBlock = button.closest('.code-block');
+		const code = codeBlock.querySelector('code').textContent;
+		navigator.clipboard.writeText(code).then(() => {
+			const originalText = button.textContent;
+			button.textContent = '✅ Copiado!';
+			setTimeout(() => {
+				button.textContent = originalText;
+				}, 2000);
+			});
 		};
 	}

@@ -10,6 +10,13 @@
 .signapedia-hero-logo {
     margin-bottom: var(--space-md);
 }
+.signapedia-hero-logo-fondo-blanco {
+    display: inline-flex;
+    background: var(--color-surface);
+    margin-bottom: var(--space-lg);
+    padding: 16px 32px;
+    border-radius: 80px;
+}
 
 .signapedia-hero-logo__img {
     max-width: 800px;
@@ -535,6 +542,274 @@
     margin: 0;
 }
 
+
+/* Agregar al archivo signapedia.css */
+
+/* Opcional: Efecto de tarjeta más prominente */
+.api-section .info-highlight-card {
+    box-shadow: 0 8px 30px rgba(108, 35, 93, 0.15);
+    border: 2px solid var(--color-signapedia);
+}
+
+/* Mejoras para la sección API */
+.api-section .info-highlight-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-xs);
+}
+
+.api-section .info-highlight-text {
+    text-align: center;
+    margin-bottom: var(--space-xs);
+    font-size: 1.1rem;
+}
+
+/* Opcional: Icono más destacado */
+.api-section .info-highlight-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+}
+
+/* Contenedor para el botón API */
+.api-button-container {
+    margin-top: var(--space-md);
+    text-align: center;
+}
+
+/* Botón API mejorado */
+.btn--api {
+    background: linear-gradient(135deg, var(--color-signapedia) 0%, var(--color-signapedia-dark) 100%);
+    color: white;
+    border: 2px solid var(--color-signapedia);
+    padding: 12px 32px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    box-shadow: 0 4px 15px rgba(108, 35, 93, 0.3);
+}
+
+.btn--api:hover {
+    background: white;
+    color: var(--color-signapedia);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(108, 35, 93, 0.4);
+}
+
+.btn--api::after {
+    content: " →";
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.btn--api:hover::after {
+    transform: translateX(4px);
+}
+
+/* Para modo oscuro */
+[data-theme="dark"] .btn--api:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: white;
+}
+
+/* Sección preview de API en signapedia.php */
+.api-preview-section {
+    background: var(--color-background-alt);
+}
+
+.api-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.api-preview-card {
+    background: var(--color-surface);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+}
+
+.api-preview-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-signapedia);
+    box-shadow: var(--shadow-lg);
+}
+
+.api-preview-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+}
+
+.api-preview-card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+    font-family: var(--font-serif);
+}
+
+.api-cta {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Hero específico para API Documentation */
+.hero--api {
+    background: linear-gradient(135deg, var(--color-signapedia) 0%, var(--color-signapedia-dark) 100%);
+    color: white;
+    text-align: center;
+    padding: calc(var(--space-xl) + 80px) 0 var(--space-xl);
+    margin-top: 80px;
+}
+
+.api-hero-logo {
+    margin-bottom: var(--space-md);
+}
+
+.api-hero-logo .hero__title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    line-height: 1.1;
+}
+
+
+
+/* Mejoras para la sección de documentación */
+.api-section {
+    scroll-margin-top: 100px; /* Para que los anchors consideren el header fixed */
+}
+
+/* Estilos para los anchors de navegación interna */
+.api-subsection {
+    scroll-margin-top: 120px;
+    position: relative;
+}
+
+.api-subsection::before {
+    content: '';
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Mejora visual para las secciones */
+.api-subsection:target {
+    background: var(--color-signapedia-light);
+    border-radius: var(--border-radius);
+    padding: var(--space-lg);
+    margin: calc(-1 * var(--space-lg));
+    border: 2px solid var(--color-signapedia);
+    transition: all 0.3s ease;
+}
+
+.api-subsection:target::after {
+    content: '📍 Sección actual';
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: var(--color-signapedia);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* CTA Section para API Documentation */
+.cta-section .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-section .section__title,
+.cta-section .section__subtitle {
+    color: white;
+    margin-bottom: var(--space-md);
+}
+
+.cta-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.cta-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.cta-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+}
+
+.cta-feature i {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
+    color: white;
+}
+
+/* Mejoras específicas para botones en CTA API */
+.cta-section .btn--signapedia {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--color-signapedia);
+    border: 2px solid white;
+    font-weight: 700;
+    padding: 15px 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn--signapedia:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+.cta-section .btn--secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn--secondary:hover {
+    background: white;
+    color: var(--color-signapedia);
+    border-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .signapedia-hero-logo__img {
@@ -593,6 +868,23 @@
         gap: var(--space-sm);
         text-align: center;
     }
+    
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-actions .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .cta-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
 }
 
 @media (max-width: 576px) {
@@ -621,6 +913,16 @@
     .api-subsection {
         padding: var(--space-sm);
     }
+    
+    .cta-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-feature {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
 }
 
 @media (min-width: 1100px) {
