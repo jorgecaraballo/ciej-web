@@ -61,8 +61,8 @@
             </div>
             <p class="hero__subtitle">Guía completa para desarrolladores - Integra el contenido normativo en tus aplicaciones</p>
             <div class="hero__actions">
-                <a href="#autenticacion" class="btn btn--signapedia">Comenzar con la Autenticación</a>
-                <a href="#filtros" class="btn btn--secondary">Ver Filtros Disponibles</a>
+                <a href="#get-access-token" class="btn btn--signapedia">Comenzar con la Autenticación</a>
+                <a href="#filtros-disponibles" class="btn btn--secondary">Ver Filtros Disponibles</a>
             </div>
         </div>
         <div class="hero__pattern"></div>
@@ -113,7 +113,7 @@
                     </div>
 
                     <!-- Obtención del access token -->
-                    <div class="api-subsection">
+                    <div id="get-access-token" class="api-subsection">
                         <h3 class="api-subtitle">🔑 Obtención del access token</h3>
                         <div class="code-block">
                             <div class="code-header">
@@ -194,7 +194,7 @@ https://api.ciejvenezuela.com/asamblea/v1/controller/fichas.php</code></pre>
                     </div>
 
                     <!-- Filtros disponibles -->
-                    <div class="api-subsection">
+                    <div id="filtros-disponibles" class="api-subsection">
                         <h3 class="api-subtitle">🔍 Filtros disponibles</h3>
                         <div class="filters-grid">
                             <div class="filter-item">
