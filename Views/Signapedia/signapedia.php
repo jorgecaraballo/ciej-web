@@ -111,7 +111,7 @@
                         </div>
                         <h3 class="objective-title">Base de Datos Completa</h3>
                         <p class="objective-description">
-                            Crear una base de datos con todas las normas publicadas oficialmente en Venezuela, organizadas de manera sistemática y precisa.
+                            Base de datos con todas las normas publicadas oficialmente en Venezuela, organizadas de manera sistemática y precisa.
                         </p>
                     </div>
                     <div class="objective-card">
@@ -120,7 +120,7 @@
                         </div>
                         <h3 class="objective-title">Herramienta Tecnológica Avanzada</h3>
                         <p class="objective-description">
-                            Desarrollar una herramienta tecnológica que permita acceder de manera organizada, cronológica e inmediata a cualquier acto normativo publicado en la Gaceta Oficial.
+                            Aplicación web que permite acceder de manera organizada, cronológica e inmediata a cualquier acto o actos normativos, publicados en la Gaceta Oficial y que además señale su vigencia, fundamento normativo y demás datos de interés.
                         </p>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                             </span>
                         </button>
                         <div class="accordion-content">
-                            <p>Esta situación se debe a múltiples factores: la multiplicidad de fuentes normativas (muchos órganos y entes del Poder Público tienen atribuida competencia normativa); la falta de coordinación entre los distintos niveles del Poder Público; la inexistencia de un organismo que efectivamente ejerza la competencia de recopilación y determinación de leyes y normas vigentes; a todo lo cual se suma la crisis institucional que atraviesa nuestro país actualmente.</p>
+                            <p>Esta situación se debe a múltiples factores que han evolucionado con los años, pero entre ellos podemos citar: por una parte, la multiplicidad de fuentes normativas (muchos órganos y entes del Poder Público tienen atribuida competencia normativa); por otra parte, la falta de coordinación entre los distintos niveles del Poder Público en cuanto al ejercicio de sus potestades normativas; la inexistencia de un organismo que efectivamente ejerza la competencia de recopilación y determinación de leyes y normas vigentes (aunque en papel tengan atribuida dicha competencia); a todo lo cual se suma la crisis institucional que atraviesa nuestro país actualmente, con su duplicidad de instituciones y el desconocimiento mutuo de varios de los Poderes Públicos constituidos, lo cual ha llevado la situación de complejidad y caos normativo a otros niveles.</p>
                         </div>
                     </div>
 
@@ -177,7 +177,7 @@
                             </span>
                         </button>
                         <div class="accordion-content">
-                            <p>El objetivo principal de Signapedia es proporcionar una herramienta tecnológica en la que se pueda consultar de manera organizada, clara, precisa y cronológica toda la información normativa publicada en Venezuela; a través del análisis y organización del único órgano de divulgación oficial del país: La Gaceta Oficial de la República.</p>
+                            <p>Así, el objetivo principal de la Signapedia, es el proporcionar una herramienta tecnológica en el que se pueda consultar de manera organizada, clara, precisa y cronológica toda la información normativa publicada en Venezuela; a través del análisis y organización del único órgano de divulgación oficial del país: La Gaceta Oficial de la República.</p>
                         </div>
                     </div>
 
@@ -193,7 +193,7 @@
                             </span>
                         </button>
                         <div class="accordion-content">
-                            <p>La idea no sólo es proporcionar la versión digitalizada de dicho órgano divulgativo, sino el análisis exhaustivo de todos y cada uno de los instrumentos normativos publicados en él, organizarlos por materias y sectores competenciales, establecer su vigencia temporal, su naturaleza jurídica, así como su rango de aplicación dentro de nuestro ordenamiento jurídico.</p>
+                            <p>En tal sentido, la idea no sólo proporcionar la versión digitalizada de dicho órgano divulgativo, sino el análisis exhaustivo de todos y cada uno de los instrumentos normativos publicados en él, organizarlos por materias y sectores competenciales, establecer su vigencia temporal, su naturaleza jurídica, así como su rango de aplicación dentro de nuestro ordenamiento jurídico; así como cualquier otro dato que pueda resultar de interés para los operadores jurídicos.</p>
                         </div>
                     </div>
 
