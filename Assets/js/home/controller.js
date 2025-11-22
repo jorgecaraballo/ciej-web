@@ -3,7 +3,7 @@ class Controller extends Controlador {
 	constructor(model, view) {
 		super(model, view);
 		this.checkCookie();
-		//this.manejoFormulario();
+		this.manejoFormulario();
 		}
 	checkCookie = () => {
 		let laCookie = this.model.getCookie(this.model.getMetodo());
@@ -30,6 +30,18 @@ class Controller extends Controlador {
 			}
 		};
 	manejoFormulario = () => {
-			this.view.manejoFormulario();
+			this.view.manejoFormulario(this.handleFormulario);
 			};
+	handleFormulario = (formData) => {
+		this.model._ajax("POST", "insertaContacto", formData, this.resultadoDatosFormulario);
+		};
+	resultadoDatosFormulario = (err, objData) => {
+		if (!err) {
+			this.view.resultadoDatosFormulario(objData);
+			}
+		else {
+			console.log(err);
+			console.log(objData);
+			}
+		};
 	}

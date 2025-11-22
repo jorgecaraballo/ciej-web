@@ -742,22 +742,22 @@
                     <form class="contact__form">
                         <div class="form__group">
                             <label for="name" class="form__label">Nombre Completo</label>
-                            <input type="text" id="name" class="form__input" required>
+                            <input type="text" id="name" name="name" class="form__input" required>
                         </div>
                         
                         <div class="form__group">
                             <label for="email" class="form__label">Correo Electrónico</label>
-                            <input type="email" id="email" class="form__input" required>
+                            <input type="email" id="email" name="email" class="form__input" required>
                         </div>
                         
                         <div class="form__group">
                             <label for="subject" class="form__label">Asunto</label>
-                            <input type="text" id="subject" class="form__input" required>
+                            <input type="text" id="subject" name="subject" class="form__input" required>
                         </div>
                         
                         <div class="form__group">
                             <label for="message" class="form__label">Mensaje</label>
-                            <textarea id="message" class="form__textarea" rows="5" required></textarea>
+                            <textarea id="message" name="message" class="form__textarea" rows="5" required></textarea>
                         </div>
                         
                         <button type="submit" class="btn btn--primary">Enviar Mensaje</button>

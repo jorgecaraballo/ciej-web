@@ -1416,12 +1416,6 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
     margin: 0 auto;
   }
 
-  /* Ajustar stats en móvil */
-  .justipedia-section .about__stats,
-  .signapedia-section .about__stats {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
 }
 
 /* Responsive Design */
@@ -1463,7 +1457,14 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
     text-align: center;
   }
   
-  .about__stats {
+  /*.about__stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }*/
+
+  /* Ajustar stats en móvil */
+  .justipedia-section .about__stats,
+  .signapedia-section .about__stats {
     grid-template-columns: 1fr;
     gap: var(--space-sm);
   }
