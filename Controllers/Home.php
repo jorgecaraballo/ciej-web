@@ -30,8 +30,18 @@ class Home extends Controllers { // Esta clase Controllers está en ../Libraries
 		}
 	public function insertaContacto() {
 		$lastInsert = $this->model->insertaContacto($_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message']);
-		$arrResponse = array('status' => true, 'msg' => 'OK', 'data' => $lastInsert);
-		$this->respuesta($arrResponse);
+		//$arrResponse = array('status' => true, 'msg' => 'OK', 'data' => $lastInsert);
+		//$this->respuesta($arrResponse);
+		$this->enviarEmail();
+		}
+	public function enviarEmail() {
+		$ob = new stdClass();
+		$ob->email = 'jorgejorgejorgejorge@gmail.com'; // A quién le enviaremos los datos que capture el formulario. 
+		$ob->username = 'Jorge Caraballo';
+		$asunto = $_POST['subject'];
+		$bodyHtml = $_POST['message'];
+		$bodyNoHtml = $_POST['message'];
+		enviarEmail($ob, $asunto, $bodyHtml, $bodyNoHtml);
 		}
 	public function factorComunVisitas($params) {
 		$ob = new HomeVisitas;

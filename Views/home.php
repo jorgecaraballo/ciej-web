@@ -816,7 +816,8 @@
         </div>
     </footer>
 
-<script src="<?= media(); ?>js/theme.js"></script>
+<script type="text/javascript" src="<?= media(); ?>js/theme.js"></script>
+<script type="text/javascript" src="<?= media(); ?>js/dots-spinner.js"></script>
 <script>
 'use strict';
 const base_url = "<?= base_url(); ?>";

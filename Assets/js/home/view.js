@@ -1,27 +1,34 @@
 'use strict';
 class View extends Vista {
+	originalText = ''; // Propiedad de clase (no necesitas this en el constructor)
 	constructor(tituloPrincipal) {
 		super(tituloPrincipal);
+		this.contactForm = document.querySelector('.contact__form');
+		this.submitBtn = this.contactForm.querySelector('button[type="submit"]');
 		}
 	muestraVisitas = (objData) => {
 		//console.log(objData);
 		document.getElementById('visitas').textContent = objData.data.visitas;
 		};
 	manejoFormulario = (handleFormulario) => {
-		const contactForm = document.querySelector('.contact__form');
-
-		if (contactForm) {
-			let self = this;
-			contactForm.addEventListener('submit', function(e) {
+		if (this.contactForm) {
+			this.contactForm.addEventListener('submit', (e) => {
 				e.preventDefault();
 				//self.logicaOriginalFormulario(this); 
 				let formData = new FormData();
-				formData.append("name", this["name"].value.trim());
-				formData.append("email", this["email"].value.trim());
-				formData.append("subject", this["subject"].value.trim());
-				formData.append("message", this["message"].value.trim());
+				formData.append("name", this.contactForm["name"].value.trim());
+				formData.append("email", this.contactForm["email"].value.trim());
+				formData.append("subject", this.contactForm["subject"].value.trim());
+				formData.append("message", this.contactForm["message"].value.trim());
+				this.originalText = this.submitBtn.textContent;
+				this.submitBtn.innerHTML = 'Procesando... <dots-spinner speed="fast" colors="red,blue,green"></dots-spinner>';
+				this.submitBtn.disabled = true;
+				this.submitBtn.style.cursor = 'not-allowed'; // ❌ No permitido
 				handleFormulario(formData);
 				});
+			}
+		else {
+			console.log('Formulario inválido');
 			}
 		};
 	logicaOriginalFormulario = (self) => {
@@ -43,5 +50,13 @@ class View extends Vista {
 		};
 	resultadoDatosFormulario = (objData) => {
 		console.log(objData);
+		this.submitBtn.textContent = 'Mensaje Enviado ✓';
+		this.submitBtn.disabled = true;
+		setTimeout(() => {
+			this.submitBtn.textContent = this.originalText;
+			this.submitBtn.disabled = false;
+			this.submitBtn.style.cursor = 'pointer'; // 👆 Mano para
+			this.contactForm.reset();
+			}, 3000);
 		};
 	}
