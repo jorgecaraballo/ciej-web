@@ -21,7 +21,7 @@ class View extends Vista {
 				formData.append("subject", this.contactForm["subject"].value.trim());
 				formData.append("message", this.contactForm["message"].value.trim());
 				this.originalText = this.submitBtn.textContent;
-				this.submitBtn.innerHTML = 'Procesando... <dots-spinner speed="fast" colors="red,blue,green"></dots-spinner>';
+				this.submitBtn.innerHTML = 'Procesando...&nbsp;&nbsp;<dots-spinner speed="fast" colors="red,blue,green"></dots-spinner>';
 				this.submitBtn.disabled = true;
 				this.submitBtn.style.cursor = 'not-allowed'; // ❌ No permitido
 				handleFormulario(formData);
