@@ -2,6 +2,7 @@
 class View extends Vista {
 	constructor(tituloPrincipal) {
 		super(tituloPrincipal);
+		this.footer_ano = document.querySelector('#footer_ano');
 		}
 	muestraVisitas = (objData) => {
 		//console.log(objData);
@@ -121,5 +122,13 @@ class View extends Vista {
             });
         }
     });
+		};
+	footerAno = () => {
+		if (this.footer_ano) {
+			this.footer_ano.textContent = (new Date()).getFullYear();
+			}
+		else {
+			console.log('No se encontró footer_ano');
+			}
 		};
 	}

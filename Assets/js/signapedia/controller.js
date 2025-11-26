@@ -5,6 +5,7 @@ class Controller extends Controlador {
 		this.checkCookie();
 		this.acordeonJustipedia();
 		this.filtrosMosaico();
+		this.footerAno();
 		}
 	checkCookie = () => {
 		let laCookie = this.model.getCookie(this.model.getMetodo());
@@ -35,5 +36,8 @@ class Controller extends Controlador {
 		};
 	filtrosMosaico = () => {
 		this.view.filtrosMosaico();
+		};
+	footerAno = () => {
+		this.view.footerAno();
 		};
 	}

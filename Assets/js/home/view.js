@@ -5,6 +5,7 @@ class View extends Vista {
 		super(tituloPrincipal);
 		this.contactForm = document.querySelector('.contact__form');
 		this.submitBtn = this.contactForm.querySelector('button[type="submit"]');
+		this.footer_ano = document.querySelector('#footer_ano');
 		}
 	muestraVisitas = (objData) => {
 		//console.log(objData);
@@ -58,5 +59,13 @@ class View extends Vista {
 			this.submitBtn.style.cursor = 'pointer'; // 👆 Mano para
 			this.contactForm.reset();
 			}, 3000);
+		};
+	footerAno = () => {
+		if (this.footer_ano) {
+			this.footer_ano.textContent = (new Date()).getFullYear();
+			}
+		else {
+			console.log('No se encontró footer_ano');
+			}
 		};
 	}

@@ -20,7 +20,7 @@ class Home extends Controllers { // Esta clase Controllers está en ../Libraries
 		$data['controller'] = get_class($this);
 		$this->views->getView($this, $this->getNombreMetodo(), $data);
 		}
-	public function datosFormulario() {
+	public function datosFormulario() { // For testing purposes
 		/*$_POST['name'];
 		$_POST['email'];
 		$_POST['subject'];
@@ -35,13 +35,23 @@ class Home extends Controllers { // Esta clase Controllers está en ../Libraries
 		$this->enviarEmail();
 		}
 	public function enviarEmail() {
-		$ob = new stdClass();
-		$ob->email = 'jorgejorgejorgejorge@gmail.com'; // A quién le enviaremos los datos que capture el formulario. 
-		$ob->username = 'Jorge Caraballo';
-		$asunto = $_POST['subject'];
-		$bodyHtml = $_POST['message'];
-		$bodyNoHtml = $_POST['message'];
-		enviarEmail($ob, $asunto, $bodyHtml, $bodyNoHtml);
+		try {
+			$ob = new stdClass();
+			//$ob->email = 'jorgejorgejorgejorge@gmail.com'; // A quién le enviaremos los datos que capture el formulario. 
+			//$ob->username = 'Jorge Caraballo'; // A quién le enviaremos los datos que capture el formulario. 
+			$ob->email = 'contacto@ciejvenezuela.com'; // A quién le enviaremos los datos que capture el formulario. 
+			$ob->username = 'Contacto'; // A quién le enviaremos los datos que capture el formulario. 
+			$ob->nombre_usuario = $_POST['name'];
+			$ob->email_usuario = $_POST['email'];
+			$asunto = $_POST['subject'];
+			$bodyHtml = $_POST['message'];
+			$bodyNoHtml = $_POST['message'];
+			enviarEmail($ob, $asunto, $bodyHtml, $bodyNoHtml);
+			}
+		catch (Exception $e) {
+			$arrResponse = array('status' => false, 'msg' => 'Hubo algún error tratando de enviar el correo', 'e' => $e);
+			$this->respuesta($arrResponse);
+			}
 		}
 	public function factorComunVisitas($params) {
 		$ob = new HomeVisitas;

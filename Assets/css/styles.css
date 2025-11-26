@@ -276,7 +276,7 @@ body {
 
 	background: no-repeat center center;
 	background-size: cover; /* Para que cubra todo el espacio sin importar el tamaño */
-	background-image: url('https://ciejvenezuela.com/images/Miradas-al-Avila-V-modificada5.png');
+	background-image: url('../images/webp/avila.webp');
 	/*background-color: white;*/
 	background-color: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
 	background-position: center;
@@ -444,6 +444,61 @@ body {
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
+
+
+.btn-jorge {
+    /* Estado NORMAL */
+    background: var(--color-signapedia-light);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(30, 58, 95, 0.3);
+    font-size: 0.95rem;
+}
+
+/* Estado HOVER - Simple y efectivo */
+.btn-jorge:hover {
+    background: var(--color-border);
+    color: #1e3a5f;
+    border: 2px solid #1e3a5f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(30, 58, 95, 0.25);
+}
+
+.btn-jorge:active {
+    transform: translateY(0);
+}
+
+.btn-jorge i {
+    font-size: 1.1em;
+}
+
+.btn-jorge:hover i {
+    transform: translateX(4px);
+}
+
+[data-theme="dark"] .btn-jorge {
+    background: var(--color-signapedia-light); /* Azul más claro para modo oscuro */
+    border-color: #2d4a80;
+}
+
+[data-theme="dark"] .btn-jorge:hover {
+    background: white;
+    color: #2d4a80;
+    border-color: #2d4a80;
+}
+
+.service-card__description .btn-jorge {
+	color: var(--color-primary);
+}
+
 
 /* About Section */
 .about__content {
@@ -1310,6 +1365,39 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
   min-height: 120px;
 }
 
+
+/* Estilos para SweetAlert2 modo oscuro */
+.swal-dark-popup {
+    background: #0f172a !important;
+    border: 1px solid #334155 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+.swal-dark-title {
+    color: #f1f5f9 !important;
+    font-weight: 600 !important;
+}
+
+.swal-dark-text {
+    color: #cbd5e1 !important;
+}
+
+.swal-dark-confirm {
+    background: #3b82f6 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+.swal-dark-confirm:hover {
+    background: #2563eb !important;
+    transform: translateY(-1px) !important;
+}
+
+
 /* Footer */
 .footer {
   background: var(--color-background-alt);
@@ -1502,6 +1590,17 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
     grid-template-columns: 1fr;
     gap: var(--space-lg);
   }
+
+    .btn-jorge {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .btn-jorge:hover {
+        transform: none; /* Eliminar transform en móvil */
+    }
   
   .footer__content {
     grid-template-columns: 1fr;
@@ -1536,6 +1635,11 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
     .team-member__img {
         width: 120px;
         height: 120px;
+    }
+
+    .btn-jorge {
+        padding: 12px 20px;
+        font-size: 0.85rem;
     }
 }
 

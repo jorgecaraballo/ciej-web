@@ -1,0 +1,11 @@
+[23-Nov-2025 22:45:09 America/Caracas] Connection error - PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/ciejvene/public_html/Libraries/Core/DB.php:7
+Stack trace:
+#0 /home/ciejvene/public_html/Libraries/Core/DB.php(7): PDO->__construct('mysql:host=loca...', 'root', 'trilobites01')
+#1 /home/ciejvene/public_html/Libraries/Core/Mysql.php(8): DB::connectDB()
+#2 /home/ciejvene/public_html/Models/HomeModel.php(4): Mysql->__construct()
+#3 /home/ciejvene/public_html/Libraries/Core/Controllers.php(15): HomeModel->__construct()
+#4 /home/ciejvene/public_html/Libraries/Core/Controllers.php(7): Controllers->loadModel()
+#5 /home/ciejvene/public_html/Controllers/Home.php(15): Controllers->__construct()
+#6 /home/ciejvene/public_html/Libraries/Core/Load.php(6): Home->__construct()
+#7 /home/ciejvene/public_html/index.php(33): require_once('/home/ciejvene/...')
+#8 {main}

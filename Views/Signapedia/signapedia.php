@@ -228,7 +228,6 @@
                     <button class="filter-btn" data-filter="identificacion">Identificación</button>
                     <button class="filter-btn" data-filter="contenido">Contenido</button>
                     <button class="filter-btn" data-filter="clasificacion">Clasificación</button>
-                    <button class="filter-btn" data-filter="gaceta">Gaceta Oficial</button>
                 </div>
 
                 <!-- Grid de Campos -->
@@ -250,7 +249,7 @@
                         <p>Fecha de emisión del instrumento normativo</p>
                     </div>
 
-                    <div class="mosaic-item" data-category="identificacion">
+                    <div class="mosaic-item" data-category="clasificacion">
                         <div class="mosaic-header">
                             <span class="mosaic-icon">⏰</span>
                             <h4>VIGENCIA</h4>
@@ -267,7 +266,7 @@
                         <p>Naturaleza jurídica del instrumento (Ley, Decreto, Resolución, etc.)</p>
                     </div>
 
-                    <div class="mosaic-item" data-category="clasificacion">
+                    <div class="mosaic-item" data-category="identificacion">
                         <div class="mosaic-header">
                             <span class="mosaic-icon">👤</span>
                             <h4>AUTOR DEL ACTO</h4>
@@ -291,7 +290,7 @@
                         <p>Clasificación por materia especializada según el sistema Signapedia</p>
                     </div>
 
-                    <div class="mosaic-item" data-category="clasificacion">
+                    <div class="mosaic-item" data-category="identificacion">
                         <div class="mosaic-header">
                             <span class="mosaic-icon">🔑</span>
                             <h4>PALABRAS CLAVE</h4>
@@ -333,7 +332,7 @@
                     </div>
 
                     <!-- Categoría: Gaceta Oficial -->
-                    <div class="mosaic-item" data-category="gaceta">
+                    <div class="mosaic-item" data-category="identificacion">
                         <div class="mosaic-header">
                             <span class="mosaic-icon">📰</span>
                             <h4>Nº DE GACETA</h4>
@@ -341,15 +340,15 @@
                         <p>Número de la Gaceta Oficial donde fue publicado</p>
                     </div>
 
-                    <div class="mosaic-item" data-category="gaceta">
+                    <div class="mosaic-item" data-category="clasificacion">
                         <div class="mosaic-header">
                             <span class="mosaic-icon">🔢</span>
-                            <h4>TIPO DE Nº</h4>
+                            <h4>TIPO</h4>
                         </div>
                         <p>Clasificación como Ordinario o Extraordinario</p>
                     </div>
 
-                    <div class="mosaic-item" data-category="gaceta">
+                    <div class="mosaic-item" data-category="identificacion">
                         <div class="mosaic-header">
                             <span class="mosaic-icon">🗓️</span>
                             <h4>FECHA DE LA GACETA</h4>
@@ -357,7 +356,7 @@
                         <p>Fecha de publicación en la Gaceta Oficial</p>
                     </div>
 
-                    <div class="mosaic-item" data-category="gaceta">
+                    <div class="mosaic-item" data-category="identificacion">
                         <div class="mosaic-header">
                             <span class="mosaic-icon">📄</span>
                             <h4>PÁGINA DE INICIO DEL ACTO</h4>
@@ -746,7 +745,7 @@
                 <div class="footer__brand">
                     <img src="<?= media(); ?>images/webp/ciej_logo_nav_2.webp" alt="CIEJ" class="logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMxYTM2NWQiLz48dGV4dCB4PSI3NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkNJRUo8L3RleHQ+PC9zdmc+'">
                     <p class="footer__description">
-                        Centro de Investigación Enciclopédica de Jurisprudencia - Excelencia en investigación jurídica desde 2008.
+                        Centro de Investigación Enciclopédica de Jurisprudencia - Excelencia en investigación jurídica desde 2019.
                     </p>
                 </div>
 
@@ -775,7 +774,7 @@
             </div>
 
             <div class="footer__bottom">
-                <p>&copy; 2024 CIEJ - Centro de Investigación Enciclopédica de Jurisprudencia. Todos los derechos reservados.</p>
+                <p>&copy; <span id="footer_ano"></span> CIEJ - Centro de Investigación Enciclopédica de Jurisprudencia. RIF : J-31720806-4 Todos los derechos reservados.</p>
 
 		    <div class="footer__stats">
 			<div class="visitas-counter">

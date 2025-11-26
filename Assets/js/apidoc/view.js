@@ -1,7 +1,9 @@
 'use strict';
 class View extends Vista {
+	originalText = ''; // Propiedad de clase (no necesitas this en el constructor)
 	constructor(tituloPrincipal) {
 		super(tituloPrincipal);
+		this.footer_ano = document.querySelector('#footer_ano');
 		}
 	muestraVisitas = (objData) => {
 		//console.log(objData);
@@ -88,5 +90,13 @@ class View extends Vista {
 				button.textContent = originalText;
 				}, 2000);
 			});
+		};
+	footerAno = () => {
+		if (this.footer_ano) {
+			this.footer_ano.textContent = (new Date()).getFullYear();
+			}
+		else {
+			console.log('No se encontró footer_ano');
+			}
 		};
 	}

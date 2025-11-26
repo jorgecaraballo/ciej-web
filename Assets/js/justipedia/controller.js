@@ -6,6 +6,7 @@ class Controller extends Controlador {
 		this.acordeonJustipedia();
 		this.filtrosMosaico();
 		this.camposMejorados();
+		this.footerAno();
 		}
 	checkCookie = () => {
 		let laCookie = this.model.getCookie(this.model.getMetodo());
@@ -39,5 +40,8 @@ class Controller extends Controlador {
 		};
 	camposMejorados = () => {
 		this.view.camposMejorados();
+		};
+	footerAno = () => {
+		this.view.footerAno();
 		};
 	}

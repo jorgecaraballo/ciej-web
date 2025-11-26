@@ -971,7 +971,7 @@ Entender la estructura completa de las fichas jurisprudenciales
                 <div class="footer__brand">
                     <img src="<?= media(); ?>images/webp/ciej_logo_nav_2.webp" alt="CIEJ" class="logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMxYTM2NWQiLz48dGV4dCB4PSI3NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkNJRUo8L3RleHQ+PC9zdmc+'">
                     <p class="footer__description">
-                        Centro de Investigación Enciclopédica de Jurisprudencia - Excelencia en investigación jurídica desde 2008.
+                        Centro de Investigación Enciclopédica de Jurisprudencia - Excelencia en investigación jurídica desde 2019.
                     </p>
                 </div>
                 
@@ -1000,7 +1000,7 @@ Entender la estructura completa de las fichas jurisprudenciales
             </div>
             
             <div class="footer__bottom">
-                <p>&copy; 2024 CIEJ - Centro de Investigación Enciclopédica de Jurisprudencia. Todos los derechos reservados.</p>
+                <p>&copy; <span id="footer_ano"></span> CIEJ - Centro de Investigación Enciclopédica de Jurisprudencia. RIF : J-31720806-4 Todos los derechos reservados.</p>
 
 		    <div class="footer__stats">
 			<div class="visitas-counter">
