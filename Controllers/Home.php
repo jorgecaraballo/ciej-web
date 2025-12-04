@@ -36,17 +36,7 @@ class Home extends Controllers { // Esta clase Controllers está en ../Libraries
 		}
 	public function enviarEmail() {
 		try {
-			$ob = new stdClass();
-			//$ob->email = 'jorgejorgejorgejorge@gmail.com'; // A quién le enviaremos los datos que capture el formulario. 
-			//$ob->username = 'Jorge Caraballo'; // A quién le enviaremos los datos que capture el formulario. 
-			$ob->email = 'contacto@ciejvenezuela.com'; // A quién le enviaremos los datos que capture el formulario. 
-			$ob->username = 'Contacto'; // A quién le enviaremos los datos que capture el formulario. 
-			$ob->nombre_usuario = $_POST['name'];
-			$ob->email_usuario = $_POST['email'];
-			$asunto = $_POST['subject'];
-			$bodyHtml = $_POST['message'];
-			$bodyNoHtml = $_POST['message'];
-			enviarEmail($ob, $asunto, $bodyHtml, $bodyNoHtml);
+			enviarEmail();
 			}
 		catch (Exception $e) {
 			$arrResponse = array('status' => false, 'msg' => 'Hubo algún error tratando de enviar el correo', 'e' => $e);

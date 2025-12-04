@@ -483,7 +483,7 @@ Entender la estructura completa de las fichas jurisprudenciales
         <!-- Sección: Materias de la Justipedia -->
 <!-- Cards Interactivas con Estadísticas para las materias de la Justipedia -->
 <!-- Sección: Materias de Justipedia - NUEVA VERSIÓN CON CARDS INTERACTIVAS -->
-<section class="section subjects-section">
+<section id="materias" class="section subjects-section">
     <div class="container">
         <h2 class="section__title">Materias de Justipedia</h2>
         <p class="section__subtitle">22 materias especializadas para búsqueda y clasificación precisa de criterios jurisprudenciales</p>
