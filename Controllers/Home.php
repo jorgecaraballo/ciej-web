@@ -29,7 +29,8 @@ class Home extends Controllers { // Esta clase Controllers está en ../Libraries
 		$this->respuesta($arrResponse);
 		}
 	public function insertaContacto() {
-		$lastInsert = $this->model->insertaContacto($_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message']);
+		$fecha = date("Y-m-d H:i:s"); 
+		$lastInsert = $this->model->insertaContacto($_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message'], $fecha);
 		//$arrResponse = array('status' => true, 'msg' => 'OK', 'data' => $lastInsert);
 		//$this->respuesta($arrResponse);
 		$this->enviarEmail();
