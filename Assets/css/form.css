@@ -1,0 +1,148 @@
+/* Mejoras para el formulario de contacto avanzado */
+
+/* Estilos para select personalizado */
+.form__select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23718096' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+}
+
+.form__select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
+}
+
+/* Contenedor para el campo de asunto con botón de edición */
+.subject-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.subject-container .form__input {
+    flex: 1;
+}
+
+.subject-edit-btn {
+    background: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 10px 12px;
+    color: var(--color-text-light);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subject-edit-btn:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+/* Estilos para hints/form hints */
+.form__hint {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+/* Nota de campos obligatorios */
+.form__note {
+    margin-bottom: var(--space-md);
+    text-align: right;
+}
+
+.required-note {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+/* Mensaje de confirmación/error */
+.form__message {
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    margin-top: var(--space-md);
+    font-weight: 500;
+    text-align: center;
+}
+
+.form__message.success {
+    background: var(--color-justipedia-light);
+    border: 1px solid var(--color-justipedia);
+    color: var(--color-justipedia);
+}
+
+.form__message.error {
+    background: #fee;
+    border: 1px solid #f66;
+    color: #c00;
+}
+
+/* Mejoras visuales para el formulario */
+.contact__form {
+    background: var(--color-surface);
+    padding: var(--space-xl);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+}
+
+.contact__form .btn--primary {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact__form .btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Estilos para modo oscuro */
+[data-theme="dark"] .form__select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23a0aec0' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+}
+
+[data-theme="dark"] .subject-edit-btn {
+    background: var(--color-surface-alt);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact__form {
+        padding: var(--space-lg);
+    }
+    
+    .subject-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .subject-edit-btn {
+        width: 100%;
+        margin-top: 8px;
+    }
+}

@@ -8,8 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Font Awesome 6 (Free) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?= media(); ?>css/reset.css">
     <link rel="stylesheet" href="<?= media(); ?>css/styles.css">
+    <link rel="stylesheet" href="<?= media(); ?>css/form.css">
+<link rel="stylesheet" href="<?= media(); ?>css/snow.css">
 </head>
 <body>
     <header class="header">
@@ -714,58 +720,124 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contacto" class="contact section">
-            <div class="container">
-                <div class="contact__content">
-                    <div class="contact__info">
-                        <h2 class="section__title">Contacto</h2>
-                        <p class="contact__description">
-                            Estamos aquí para colaborar en sus proyectos de investigación jurídica.
-                        </p>
-                        
-                        <div class="contact__details">
-                            <div class="contact__item" style="display: none;">
-                                <span class="contact__icon">📧</span>
-                                <span>investigacion@ciejvenezuela.com</span>
-                            </div>
-                            <div class="contact__item" style="display: none;">
-                                <span class="contact__icon">📞</span>
-                                <span>+58 212-555-0100</span>
-                            </div>
-                            <div class="contact__item">
-                                <span class="contact__icon">📍</span>
-                                <span>Caracas, Venezuela</span>
-                            </div>
-                        </div>
+<!-- Contact Section - Actualizado -->
+<section id="contacto" class="contact section">
+    <div class="container">
+        <div class="contact__content">
+            <div class="contact__info">
+                <h2 class="section__title">Contacto</h2>
+                <p class="contact__description">
+                    Estamos aquí para colaborar en sus proyectos de investigación jurídica.
+                </p>
+
+                <div class="contact__details">
+                    <div class="contact__item" style="display: none;">
+                        <span class="contact__icon">📧</span>
+                        <span>investigacion@ciejvenezuela.com</span>
                     </div>
-                    
-                    <form class="contact__form">
-                        <div class="form__group">
-                            <label for="name" class="form__label">Nombre Completo</label>
-                            <input type="text" id="name" name="name" class="form__input" required>
-                        </div>
-                        
-                        <div class="form__group">
-                            <label for="email" class="form__label">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" class="form__input" required>
-                        </div>
-                        
-                        <div class="form__group">
-                            <label for="subject" class="form__label">Asunto</label>
-                            <input type="text" id="subject" name="subject" class="form__input" required>
-                        </div>
-                        
-                        <div class="form__group">
-                            <label for="message" class="form__label">Mensaje</label>
-                            <textarea id="message" name="message" class="form__textarea" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn--primary">Enviar Mensaje</button>
-                    </form>
+                    <div class="contact__item" style="display: none;">
+                        <span class="contact__icon">📞</span>
+                        <span>+58 212-555-0100</span>
+                    </div>
+                    <div class="contact__item">
+                        <span class="contact__icon">📍</span>
+                        <span>Caracas, Venezuela</span>
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <form id="contactForm" class="contact__form">
+                <!-- Campo 1: Nombre completo -->
+                <div class="form__group">
+                    <label for="name" class="form__label">Nombre Completo *</label>
+                    <input type="text" id="name" name="name" class="form__input" required
+                           placeholder="Ingrese su nombre completo">
+                    <div class="form__hint">Su nombre será utilizado para dirigirnos a usted personalmente</div>
+                </div>
+
+                <!-- Campo 2: Correo electrónico -->
+                <div class="form__group">
+                    <label for="email" class="form__label">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" class="form__input" required
+                           placeholder="ejemplo@correo.com">
+                    <div class="form__hint">Utilizaremos este correo para responder a su consulta</div>
+                </div>
+
+                <!-- Campo 3: Categoría del contacto -->
+                <div class="form__group">
+                    <label for="category" class="form__label">¿Sobre qué desea contactarnos? *</label>
+                    <select id="category" name="category" class="form__select" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="justipedia">Justipedia</option>
+                        <option value="signapedia">Signapedia</option>
+                        <option value="ambos">Ambos (Justipedia + Signapedia)</option>
+                        <option value="ciej">Otra área del CIEJ</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <div class="form__hint">Nos ayuda a dirigir su consulta al equipo especializado</div>
+                </div>
+
+                <!-- Campo 4: Motivo de la consulta -->
+                <div class="form__group">
+                    <label for="reason" class="form__label">Motivo de la consulta *</label>
+                    <select id="reason" name="reason" class="form__select" required>
+                        <option value="" disabled selected>Seleccione el motivo</option>
+                        <option value="informacion">Información general</option>
+                        <option value="suscripcion">Suscripción / Acceso</option>
+                        <option value="soporte">Soporte técnico</option>
+                        <option value="sugerencia">Sugerencia o comentario</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <div class="form__hint">Identifica la naturaleza principal de su consulta</div>
+                </div>
+
+                <!-- Campo 5: Asunto (dinámico o editable) -->
+                <div class="form__group">
+                    <label for="subject" class="form__label">Asunto</label>
+                    <div class="subject-container">
+                        <input type="text" id="subject" name="subject" class="form__input"
+                               placeholder="Se generará automáticamente según su selección" readonly>
+                        <button type="button" id="editSubject" class="subject-edit-btn" title="Editar asunto">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
+                    <div class="form__hint">Puede personalizar el asunto si lo desea</div>
+                </div>
+
+                <!-- Campo para "Otro" específico (se muestra dinámicamente) -->
+                <div class="form__group" id="otherReasonGroup" style="display: none;">
+                    <label for="otherReason" class="form__label">Especifique el motivo *</label>
+                    <input type="text" id="otherReason" name="otherReason" class="form__input"
+                           placeholder="Describa brevemente el motivo de su contacto">
+                </div>
+
+                <!-- Campo 6: Mensaje -->
+                <div class="form__group">
+                    <label for="message" class="form__label">Mensaje *</label>
+                    <textarea id="message" name="message" class="form__textarea" rows="6" required
+                              placeholder="Describa en detalle su consulta, sugerencia o solicitud"></textarea>
+                    <div class="form__hint">Por favor, sea lo más específico posible para una mejor atención</div>
+                </div>
+
+                <!-- Nota de campos obligatorios -->
+                <div class="form__note">
+                    <span class="required-note">* Campos obligatorios</span>
+                </div>
+
+                <!-- Botón de envío -->
+                <button type="submit" class="btn btn--primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Enviar Mensaje
+                </button>
+
+                <!-- Mensaje de confirmación -->
+                <div id="formMessage" class="form__message" style="display: none;"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
     </main>
 
     <footer class="footer">
@@ -819,6 +891,7 @@
 
 <script type="text/javascript" src="<?= media(); ?>js/theme.js"></script>
 <script type="text/javascript" src="<?= media(); ?>js/dots-spinner.js"></script>
+<script src="<?= media(); ?>js/<?= $data['page_name']; ?>/formulario.js"></script>
 <script>
 'use strict';
 const base_url = "<?= base_url(); ?>";

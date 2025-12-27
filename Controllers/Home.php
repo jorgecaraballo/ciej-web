@@ -30,7 +30,7 @@ class Home extends Controllers { // Esta clase Controllers está en ../Libraries
 		}
 	public function insertaContacto() {
 		$fecha = date("Y-m-d H:i:s"); 
-		$lastInsert = $this->model->insertaContacto($_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message'], $fecha);
+		$lastInsert = $this->model->insertaContacto($_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message'], $fecha, $_POST['categoryText'], $_POST['reasonText']);
 		//$arrResponse = array('status' => true, 'msg' => 'OK', 'data' => $lastInsert);
 		//$this->respuesta($arrResponse);
 		$this->enviarEmail();
