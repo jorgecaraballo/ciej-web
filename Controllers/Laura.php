@@ -10,12 +10,12 @@ class HomeVisitas extends Visitas {
 			}
 		}
 	}
-class Jorge extends Controllers { // Esta clase Controllers está en ../Libraries/Core/Controllers.php (el autoload la carga)
+class Laura extends Controllers { // Esta clase Controllers está en ../Libraries/Core/Controllers.php (el autoload la carga)
 	public function __construct() {
 		parent::__construct();
 		}
-	public function jorge() {
-		$data['page_title'] = 'Contactar a Jorge Caraballo';
+	public function laura() {
+		$data['page_title'] = 'Laura Aguerrevere F. | Abogada y Directora del CIEJ';
 		$data['page_name'] = $this->getNombreMetodo();
 		$data['controller'] = get_class($this);
 		$this->views->getView($this, $this->getNombreMetodo(), $data);

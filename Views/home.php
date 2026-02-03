@@ -243,6 +243,11 @@
             <span class="credential-icon">📧</span>
             <span><a href="mailto:justipediabogado@gmail.com">justipediabogado@gmail.com</a></span>
         </div>
+        <div class="credential-item">
+            <a href="<?= base_url(); ?>laura" class="btn btn-jorge">
+                <i class="fas fa-paper-plane"></i> Contactar a Laura
+            </a>
+        </div>
     </div>
 
     <!-- NUEVO FOOTER DEL TEAM MEMBER -->

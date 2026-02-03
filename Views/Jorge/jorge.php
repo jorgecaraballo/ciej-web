@@ -224,7 +224,7 @@
                 <div class="footer__brand">
                     <img src="<?= media(); ?>images/webp/ciej_logo_nav_2.webp" alt="CIEJ" class="logo">
                     <p class="footer__description">
-                        Centro de Investigación Enciclopédica de Jurisprudencia - Excelencia en investigación jurídica desde 2019.
+                        Centro de Investigación Enciclopédica de Jurisprudencia - Excelencia en investigación jurídica desde 2008.
                     </p>
                 </div>
                 
