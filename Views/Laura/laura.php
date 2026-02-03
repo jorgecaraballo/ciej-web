@@ -345,47 +345,73 @@
         </section>
 
         <!-- Sección de Publicaciones y Logros -->
-        <section class="section" style="background: var(--color-background-alt);">
-            <div class="container">
-                <h2 class="section__title">Áreas de Especialización</h2>
-                <div class="services__grid">
-                    <div class="service-card">
-                        <h3 class="service-card__title">Derecho Administrativo</h3>
-                        <p class="service-card__description">
-                            Especialización en derecho público, administración y relaciones entre el Estado y los ciudadanos.
-                        </p>
+<!-- Sección de Publicaciones y Logros -->
+<section class="section" style="background: var(--color-background-alt);">
+    <div class="container">
+        <h2 class="section__title">Áreas de Especialización</h2>
+        <div class="services__grid">
+            <div class="service-card">
+                <h3 class="service-card__title">Derecho Administrativo</h3>
+                <p class="service-card__description">
+                    Especialización en derecho público, administración y relaciones entre el Estado y los ciudadanos.
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <h3 class="service-card__title">Derecho Tributario Internacional</h3>
+                <p class="service-card__description">
+                    Experiencia en tratados de doble tributación y políticas fiscales internacionales.
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <h3 class="service-card__title">Derecho Constitucional</h3>
+                <p class="service-card__description">
+                    Conocimiento profundo de la constitución y jurisprudencia constitucional venezolana.
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <h3 class="service-card__title">Tecnología Jurídica</h3>
+                <p class="service-card__description">
+                    Aplicación de nuevas tecnologías a la investigación y práctica del derecho.
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <h3 class="service-card__title">Relaciones Internacionales</h3>
+                <p class="service-card__description">
+                    Estudio de las relaciones entre estados y organismos internacionales.
+                </p>
+            </div>
+            
+            <!-- NUEVA CARD: Idiomas -->
+            <div class="service-card">
+                <div class="service-card__icon" style="font-size: 2.5rem; margin-bottom: var(--space-sm); display: none;">🗣️</div>
+                <h3 class="service-card__title">Idiomas 🗣️</h3>
+                <div class="service-card__description">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span><strong>Español:</strong></span>
+                            <span style="color: var(--color-justipedia); font-weight: 600;">Nativo</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span><strong>Inglés:</strong></span>
+                            <span style="color: var(--color-justipedia); font-weight: 600;">Intermedio/Avanzado</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span><strong>Alemán:</strong></span>
+                            <span style="color: var(--color-justipedia); font-weight: 600;">Básico</span>
+                        </div>
                     </div>
-                    
-                    <div class="service-card">
-                        <h3 class="service-card__title">Derecho Tributario Internacional</h3>
-                        <p class="service-card__description">
-                            Experiencia en tratados de doble tributación y políticas fiscales internacionales.
-                        </p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3 class="service-card__title">Derecho Constitucional</h3>
-                        <p class="service-card__description">
-                            Conocimiento profundo de la constitución y jurisprudencia constitucional venezolana.
-                        </p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3 class="service-card__title">Tecnología Jurídica</h3>
-                        <p class="service-card__description">
-                            Aplicación de nuevas tecnologías a la investigación y práctica del derecho.
-                        </p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3 class="service-card__title">Relaciones Internacionales</h3>
-                        <p class="service-card__description">
-                            Estudio de las relaciones entre estados y organismos internacionales.
-                        </p>
-                    </div>
+                    <p style="margin-top: 12px; font-size: 0.9rem; color: var(--color-text-light);">
+                        Habilidades lingüísticas que complementan su formación en Relaciones Internacionales.
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <!-- Sección de Contacto Actualizada -->
         <section id="contacto" class="contact section">
@@ -464,60 +490,65 @@
         </section>
 
         <!-- Sección en inglés (para alcance internacional) -->
-        <section class="section" style="background: var(--color-justipedia-light);">
-            <div class="container">
-                <h2 class="section__title">Professional Profile (English)</h2>
-                <div class="about__content">
-                    <div class="about__text">
-                        <div class="about__description">
-                            <p><strong>Laura Aguerrevere F.</strong> - Lawyer and specialist in Administrative Law (UCAB), 
-                            Master in Public Management (IESA), currently pursuing a Doctorate in Political Science 
-                            with a specialization in International Relations (USB), and university professor (UCV).</p>
-                            
-                            <p style="margin-top: var(--space-md);"><strong>Professional Experience:</strong> With over 15 years 
-                            of experience in the judicial field, as a lawyer in the Political-Administrative Chamber 
-                            and the Constitutional Chamber of the Supreme Court of Justice.</p>
-                            
-                            <p style="margin-top: var(--space-md);"><strong>Government Service:</strong> She also served as 
-                            Division Head at the Venezuelan National Integrated Customs and Tax Administration Service 
-                            (SENIAT), attached to the Public Policy Office, where she had the opportunity to participate 
-                            in the drafting, discussion, and signing of the double taxation treaties signed by Venezuela 
-                            with several countries.</p>
-                            
-                            <p style="margin-top: var(--space-md);"><strong>CIEJ Leadership:</strong> As Director of the 
-                            Center for Legal Research (CIEJ), since 2019, she has dedicated herself to the application of 
-                            new technologies to legal research, having had the opportunity to participate, among other things, 
-                            in the development of a virtual library of historical and legal documents related to the case 
-                            against Venezuela before the International Court of Justice regarding the Essequibo disputed territory. 
-                            This was in support of the team of lawyers defending Venezuela.</p>
+<!-- Sección en inglés (para alcance internacional) -->
+<section class="section" style="background: var(--color-justipedia-light);">
+    <div class="container">
+        <h2 class="section__title">Professional Profile (English)</h2>
+        <div class="about__content">
+            <div class="about__text">
+                <div class="about__description">
+                    <p><strong>Laura Aguerrevere F.</strong> - Lawyer and specialist in Administrative Law (UCAB), 
+                    Master in Public Management (IESA), currently pursuing a Doctorate in Political Science 
+                    with a specialization in International Relations (USB), and university professor (UCV).</p>
+                    
+                    <p style="margin-top: var(--space-md);"><strong>Professional Experience:</strong> With over 15 years 
+                    of experience in the judicial field, as a lawyer in the Political-Administrative Chamber 
+                    and the Constitutional Chamber of the Supreme Court of Justice.</p>
+                    
+                    <p style="margin-top: var(--space-md);"><strong>Government Service:</strong> She also served as 
+                    Division Head at the Venezuelan National Integrated Customs and Tax Administration Service 
+                    (SENIAT), attached to the Public Policy Office, where she had the opportunity to participate 
+                    in the drafting, discussion, and signing of the double taxation treaties signed by Venezuela 
+                    with several countries.</p>
+                    
+                    <p style="margin-top: var(--space-md);"><strong>CIEJ Leadership:</strong> As Director of the 
+                    Center for Legal Research (CIEJ), since 2019, she has dedicated herself to the application of 
+                    new technologies to legal research, having had the opportunity to participate, among other things, 
+                    in the development of a virtual library of historical and legal documents related to the case 
+                    against Venezuela before the International Court of Justice regarding the Essequibo disputed territory. 
+                    This was in support of the team of lawyers defending Venezuela.</p>
+                    
+                    <p style="margin-top: var(--space-md);"><strong>Languages:</strong> Native Spanish, 
+                    Intermediate/Advanced English, Basic German.</p>
+                </div>
+                
+                <div style="margin-top: var(--space-lg);">
+                    <h3 style="color: var(--color-primary); margin-bottom: var(--space-sm);">Contact Information:</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-md);">
+                        <div>
+                            <strong>Email:</strong><br>
+                            lauraguerrevere@gmail.com<br>
+                            justipediabogado@gmail.com
                         </div>
-                        
-                        <div style="margin-top: var(--space-lg);">
-                            <h3 style="color: var(--color-primary); margin-bottom: var(--space-sm);">Contact Information:</h3>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-md);">
-                                <div>
-                                    <strong>Email:</strong><br>
-                                    lauraguerrevere@gmail.com<br>
-                                    justipediabogado@gmail.com
-                                </div>
-                                <div>
-                                    <strong>Phone:</strong><br>
-                                    +58 412 9389420
-                                </div>
-                                <div>
-                                    <strong>Instagram:</strong><br>
-                                    @aguerreverelaura
-                                </div>
-                                <div>
-                                    <strong>Website:</strong><br>
-                                    www.ciejvenezuela.com
-                                </div>
-                            </div>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            +58 412 9389420
+                        </div>
+                        <div>
+                            <strong>Instagram:</strong><br>
+                            @aguerreverelaura
+                        </div>
+                        <div>
+                            <strong>Website:</strong><br>
+                            www.ciejvenezuela.com
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <footer class="footer">
@@ -526,7 +557,7 @@
                 <div class="footer__brand">
                     <img src="<?= media(); ?>images/webp/ciej_logo_nav_2.webp" alt="CIEJ" class="logo">
                     <p class="footer__description">
-                        Centro de Investigación Enciclopédica de Jurisprudencia - Excelencia en investigación jurídica desde 2008.
+                        Centro de Investigación Enciclopédica de Jurisprudencia - Excelencia en investigación jurídica desde 2019.
                     </p>
                 </div>
                 
