@@ -115,7 +115,16 @@ class Controller extends Controlador {
 		}
     initSnowEffect() {
         // Integrar efecto de nieve (opcional - se puede activar/desactivar)
-        this.snowController = SnowController.integrateWithMainController(this);
+		// Obtén el mes actual
+		const fechaActual = new Date();
+		const mesActual = fechaActual.getMonth(); // Devuelve el mes actual (0 = enero, 1 = febrero, etc.)
+
+		// Verifica si el mes es diciembre (11)
+		if (mesActual === 11) {
+		    // Código a ejecutar en diciembre
+		    //console.log("Estamos en diciembre.");
+        		this.snowController = SnowController.integrateWithMainController(this);
+		}
     }
 	checkCookie = () => {
 		let laCookie = this.model.getCookie(this.model.getMetodo());
