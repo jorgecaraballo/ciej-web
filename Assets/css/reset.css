@@ -7,12 +7,14 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
+    overflow-x: hidden;
 }
 
 img, picture, video, canvas, svg {

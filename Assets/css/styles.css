@@ -1757,6 +1757,9 @@ var(--space-md) usa una variable CSS (ej: 1rem o 16px)
     box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
     transition: var(--transition);
     text-decoration: none;
+    /* ✅ Fix para móvil con overflow horizontal */
+    right: 1rem;
+    bottom: 1rem;
 }
 
 .whatsapp-float:hover {
