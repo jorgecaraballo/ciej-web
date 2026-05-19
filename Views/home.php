@@ -894,6 +894,15 @@
         </div>
     </footer>
 
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/<?= WHATSAPP_NUMBER; ?>?text=Hola%2C%20me%20comunico%20desde%20el%20sitio%20web%20del%20CIEJ"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
 <script type="text/javascript" src="<?= media(); ?>js/theme.js"></script>
 <script type="text/javascript" src="<?= media(); ?>js/dots-spinner.js"></script>
 <script src="<?= media(); ?>js/<?= $data['page_name']; ?>/formulario.js"></script>
