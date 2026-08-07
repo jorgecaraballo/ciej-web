@@ -26,8 +26,9 @@
             
             <ul class="nav__menu">
                 <li><a href="#inicio" class="nav__link">Inicio</a></li>
-		<li><a href="#justipedia" class="nav__link">Justipedia</a></li>
-		<li><a href="#signapedia" class="nav__link">Signapedia</a></li>
+        		<li><a href="#justipedia" class="nav__link">Justipedia</a></li>
+        		<li><a href="#signapedia" class="nav__link">Signapedia</a></li>
+                <li><a href="#digitalizacion" class="nav__link">Digitalización</a></li>
                 <li><a href="#servicios" class="nav__link">Investigaciones</a></li>
                 <li><a href="#equipo" class="nav__link">Equipo</a></li>
                 <li><a href="#contacto" class="nav__link">Contacto</a></li>
@@ -139,6 +140,57 @@
                 </div>
             </div>
 </section>	
+
+
+
+<!-- Sección Digitalización de Archivos -->
+<section id="digitalizacion" class="digitalizacion section">
+    <div class="container">
+        <h2 class="section__title">Transformamos Archivos Físicos en Bibliotecas Digitales Funcionales</h2>
+        <p class="section__subtitle">
+            En CIEJ ayudamos a instituciones, bufetes, universidades y organizaciones a convertir sus archivos y bibliotecas físicas en sistemas digitales organizados, accesibles y fáciles de consultar.
+        </p>
+
+        <div class="services__grid">
+            <div class="service-card">
+                <div class="service-card__icon">📚</div>
+                <h3 class="service-card__title">Digitalización de Libros y Documentos</h3>
+                <p class="service-card__description">
+                    Convertimos su archivo físico a formato digital, preservando su contenido de forma segura y accesible.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card__icon">🗂️</div>
+                <h3 class="service-card__title">Organización y Categorización</h3>
+                <p class="service-card__description">
+                    Clasificamos y estructuramos su archivo para que la información sea fácil de ubicar y consultar.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card__icon">🔎</div>
+                <h3 class="service-card__title">Biblioteca Digital con Buscador</h3>
+                <p class="service-card__description">
+                    Desarrollamos un sistema propio de consulta con búsqueda por múltiples criterios, como Justipedia y Signapedia.
+                </p>
+            </div>
+        </div>
+
+
+        <div style="text-align: center; margin-top: 5rem;">
+            <a href="https://wa.me/<?= WHATSAPP_NUMBER; ?>?text=Hola%2C%20quiero%20solicitar%20una%20revisi%C3%B3n%20inicial%20de%20mi%20archivo%20f%C3%ADsico"
+               class="btn btn--primary"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i>&nbsp;&nbsp; <span style="font-size: 1.2rem;">Solicitar Revisión Inicial Gratuita</span>
+            </a>
+        </div>
+
+
+    </div>
+</section>
+
 
         <!-- Services Section -->
         <section id="servicios" class="services section">
@@ -859,12 +911,13 @@
                     <div class="footer__column">
                         <h4>Enlaces Rápidos</h4>
                         <ul>
-				<li><a href="#inicio">Inicio</a></li>
-				<li><a href="#justipedia">Justipedia</a></li>
-				<li><a href="#signapedia">Signapedia</a></li>
-				<li><a href="#servicios">Investigaciones</a></li>
-				<li><a href="#equipo">Equipo</a></li>
-				<li><a href="#contacto">Contacto</a></li>
+            				<li><a href="#inicio">Inicio</a></li>
+            				<li><a href="#justipedia">Justipedia</a></li>
+            				<li><a href="#signapedia">Signapedia</a></li>
+                            <li><a href="#digitalizacion">Digitalización</a></li>
+            				<li><a href="#servicios">Investigaciones</a></li>
+            				<li><a href="#equipo">Equipo</a></li>
+            				<li><a href="#contacto">Contacto</a></li>
                         </ul>
                     </div>
                     
