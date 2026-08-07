@@ -57,7 +57,7 @@
                 <h1 class="hero__title">Centro de Investigación Enciclopédica de Jurisprudencia</h1>
                 <p class="hero__subtitle">Tecnología al servicio de la investigación jurídica</p>
                 <div class="hero__actions">
-                    <a href="#servicios" class="btn btn--primary">Nuestros Servicios</a>
+                    <a href="#digitalizacion" class="btn btn--primary">Nuestros Servicios</a>
                     <a href="#contacto" class="btn btn--secondary">Contactar Especialistas</a>
                 </div>
             </div>
